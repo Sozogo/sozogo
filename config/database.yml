@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sozogo_development
+  host: localhost
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: sozogo_test
+  host: localhost
+  pool: 5
