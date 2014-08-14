@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Sozogo
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav
+      - if current_church
+        = link_to "Log Out", destroy_session_path
+      - else
+        = link_to "Log in", new_session_path
+    = yield
