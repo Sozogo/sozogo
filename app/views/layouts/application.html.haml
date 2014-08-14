@@ -9,6 +9,8 @@
     %nav
       - if current_church
         = link_to "Log Out", destroy_session_path
+        = link_to "Add Project", new_project_path
       - else
         = link_to "Log in", new_session_path
+        = link_to "Projects", projects_path
     = yield

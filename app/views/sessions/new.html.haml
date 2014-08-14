@@ -1,7 +1,9 @@
 %h1 Log In
 = form_tag create_session_path do
-  = label_tag :email
-  = text_field_tag :email
-  = label_tag :password
-  = password_field_tag :password
+  .email
+    = label_tag :email
+    = text_field_tag :email
+  .password
+    = label_tag :password
+    = password_field_tag :password
   = submit_tag "Log in"
