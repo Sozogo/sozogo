@@ -8,13 +8,13 @@ class ChurchTest < ActiveSupport::TestCase
   end
 
   test "should create password_salt before save" do
-    church = Church.new
+    church = Church.new(:email => "joel@brewerdigital.com", :password => "helloworld")
     church.save
     assert_not_equal church.password_salt, nil, "Password salt is nil"
   end
 
   test "should create password_hash before save" do
-    church = Church.new
+    church = Church.new(:email => "joel@brewerdigitalcom", :password => "helloworld")
     church.save
     assert_not_equal church.password_hash, nil, "Password hash is nil"
   end

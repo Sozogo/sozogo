@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_church
-    @churrent_church ||= Church.find(session[:church_id]) if session[:church_id]
+    @current_church ||= Church.find(session[:church_id]) if session[:church_id]
   end
 
   helper_method :current_church

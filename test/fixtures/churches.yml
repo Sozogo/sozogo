@@ -1,11 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
-
-two:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
+cbc:
+  password_salt: $2a$10$iQpPOXJXqn0fb2R/1UydFu
+  email: cbc@cbcnashville.com
+  password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$iQpPOXJXqn0fb2R/1UydFu") %>
