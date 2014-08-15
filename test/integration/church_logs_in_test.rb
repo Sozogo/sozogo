@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ChurchLogsInTest < ActionDispatch::IntegrationTest
-  test "login and browse site" do
+  test "church login" do
     get "/new-session"
     assert_response :success
 
