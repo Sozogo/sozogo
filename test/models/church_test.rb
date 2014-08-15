@@ -2,6 +2,11 @@ require 'test_helper'
 
 class ChurchTest < ActiveSupport::TestCase
 
+  test "should not save church when email is not provied" do
+    church = Church.new
+    assert_not church.save
+  end
+
   test "should create password_salt before save" do
     church = Church.new
     church.save
