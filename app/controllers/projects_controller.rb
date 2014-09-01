@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :authorize, :only => :new
 
   def new
     @project = Project.new

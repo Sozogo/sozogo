@@ -2,16 +2,10 @@
 %html
   %head
     %title Sozogo
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
-      - if current_church
-        = link_to "Log Out", destroy_session_path
-        = link_to "Projects", projects_path
-        = link_to "Add Project", new_project_path
-      - else
-        = link_to "Log in", new_session_path
-        = link_to "Projects", projects_path
-    = yield
+    = render 'layouts/header'
+    %section.main-container 
+      = yield

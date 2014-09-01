@@ -7,5 +7,11 @@ class ApplicationController < ActionController::Base
     @current_church ||= Church.find(session[:church_id]) if session[:church_id]
   end
 
+  def authorize
+    unless current_church != nil
+      redirect_to "/"
+    end
+  end
+
   helper_method :current_church
 end

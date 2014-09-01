@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/new-session" => "sessions#new"
   post "/create-session" => "sessions#create"
   get "/destroy-session" => "sessions#destroy"
+  get "/about" => "home#about"
 end

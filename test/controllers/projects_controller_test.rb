@@ -19,9 +19,13 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:project)
   end
 
-  test "should get new" do
+  test "should not get new if not signed in" do
     get :new
+    assert_response :redirect
+  end
+
+  test "should get new if signed in" do
+    get(:new, {}, {'church_id' => '1' })
     assert_response :success
-    assert_not_nil assigns(:project)
   end
 end

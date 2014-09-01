@@ -1,9 +1,9 @@
-%h1 New Project
-= form_for @project do |f|
-  .title
-    = f.label :title
-    = f.text_field :title
-  .description
-    = f.label :description
-    = f.text_area :description
-  = f.submit "Create Project"
+%section.form
+  = form_for @project do |f|
+    .title
+      = f.label :title
+      = f.text_field :title
+    .description
+      = f.label :description
+      = f.text_area :description, rows: 10
+    = f.submit "Create Project"
