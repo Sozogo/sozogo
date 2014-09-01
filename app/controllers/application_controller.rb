@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     unless current_church != nil
+      flash[:notice] = "You need to be signed in first."
       redirect_to "/"
     end
   end
