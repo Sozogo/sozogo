@@ -17,4 +17,9 @@ class ProjectTest < ActiveSupport::TestCase
     project = Project.new(:description => "come help!", :title => long_title)
     assert_not project.save
   end
+
+  test "should not create project in the past" do
+    project = Project.new(:description => "come help!", :title => "come help!", :year => "2012", :month => "01", :day => "01")
+    assert_not project.save
+  end
 end

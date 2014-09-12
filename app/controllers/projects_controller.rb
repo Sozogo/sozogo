@@ -15,6 +15,8 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
+
     if @project.save
       flash[:notice] = "You successfully created a new project"
       redirect_to "/"
@@ -26,7 +28,8 @@ class ProjectsController < ApplicationController
   end
 
   private
+
   def project_params
-    params.require(:project).permit(:title, :description)
+    params.require(:project).permit(:title, :description, :month, :day, :year)
   end
 end
