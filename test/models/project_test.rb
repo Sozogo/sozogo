@@ -11,4 +11,10 @@ class ProjectTest < ActiveSupport::TestCase
     project = Project.new(:title => "Widows in need")
     assert_not project.save
   end
+
+  test "should not create project when title is > 60 characters" do
+    long_title = "a" * 61
+    project = Project.new(:description => "come help!", :title => long_title)
+    assert_not project.save
+  end
 end

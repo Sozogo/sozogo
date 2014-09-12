@@ -3,7 +3,18 @@
     .title
       = f.label :title
       = f.text_field :title
+    .date
+      = f.label "Start Date"
+      .month.inline= select_month(Date.today, use_short_month: true)
+      .day.inline= select_day(Date.today)
+      .year.inline= select_year(Date.today)
+    .time
+      = f.label "Start Time"
+      .hour.inline= select_hour(Time.now, start_hour: 1, end_hour: 12)
+      .minute.inline= select_minute(Time.now)
+      .am-pm.inline= select("ampm", "ampm", [['AM', 'AM'],['PM', 'PM']])
     .description
       = f.label :description
       = f.text_area :description, rows: 10
+        
     = f.submit "Create Project"
