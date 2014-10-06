@@ -26,4 +26,4 @@ What we're looking for:
 - Social Media Strategists
 
 Not sure where you fit it? Shoot us an email we'll figure something out!
-- Joel: [joelbrewer01@gmail.com](joelbrewer01@gmail.com)
+- Joel: [joelbrewer01@gmail.com](mailto:joelbrewer01@gmail.com)
