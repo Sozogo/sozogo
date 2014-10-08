@@ -1,7 +1,7 @@
 # About Sozogo
-We all have unique skills and personalites, something unmatchable, unshakable, something that makes us.. well, us. Here, we are seeking to create an opportunity for everyone to use their skills to make this world a better and brighter place for everyone. Get involved today!
+We all have unique skills and personalites, something unmatchable, unshakable, something that makes us.. well, us. Here, we are seeking to create an opportunity for everyone to use their skills to make this world a better and brighter place for everyone. [Get involved today!](get_involved.md)
 
-The following instructions will automatically download and provision a virtual machine for you to begin hacking on Sozogo!
+The following instructions will automatically download and provision a virtual machine for you to begin hacking on Sozogo.
 
 ##Getting Started
 
@@ -81,7 +81,7 @@ Once your VM is up to date, you can start a rails instance using the following c
 ```
 bundle exec rails s
 ```
-In a few seconds, rails will start serving pages. To access them, open a web browser to http://localhost:4000 - if it all worked you should see sozogo! Congratulations, you are ready to start working!
+In a few seconds, rails will start serving pages. To access them, open a web browser to http://localhost:4000 - if it all worked you should see sozogo. Congratulations, you are ready to start working!
 
 You can now edit files on your local file system, using your favorite text editor or IDE. When you reload your web browser, it should have the latest changes.
 
