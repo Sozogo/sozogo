@@ -1,5 +1,5 @@
 # About Sozogo
-We all have unique skills and personalites, something unmatchable, unshakable, something that makes us.. well, us. Here, we are seeking to create an opportunity for everyone to use their skills to make this world a better and brighter place for everyone. [Get involved today!](get_involved.md)
+We all have unique skills and personalities, something unmatchable, unshakable, something that makes us.. well, us. Here, we are seeking to create an opportunity for everyone to use their skills to make this world a better and brighter place for everyone. [Get involved today!](get_involved.md)
 
 ## Get Involved
 We are always looking for folks to help us out with the development of Sozogo. Whether you are a CSS guru, a Ruby wizard, or completely new to web development, we have a place for you. Check out our [Get Involved](get_involved.md) page for more reasons to get involved!
