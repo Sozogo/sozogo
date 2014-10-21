@@ -1,15 +1,14 @@
 ##Getting Started
 
-The following instructions will automatically download and provision a virtual machine for you to begin hacking on Sozogo.
+The following instructions will automatically download and provision a virtual machine for you to begin hacking on Sozogo. We use Vagrant, an awesome, open-source, piece of software for provisioning virtual machines to manage our develpment environments.
 
 Shoutout to the [Discorse getting started page](https://github.com/discourse/discourse/blob/master/docs/VAGRANT.md) for providing a solid template for this page
 
-1. Install Git: http://git-scm.com/downloads (or GitHub for Windows if you want a GUI)
-2. Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
-3. Install Vagrant: http://www.vagrantup.com/ (We require Vagrant 1.1.2+ or later)
-4. Open a terminal
-5. Clone the project: git clone https://github.com/jahbrewski/sozogo.git
-6. Enter the project directory: cd sozogo
+1. Install Vagrant: http://www.vagrantup.com/ (We require Vagrant 1.1.2+ or later)
+2. Open a terminal
+3. Clone the project: git clone https://github.com/jahbrewski/sozogo.git
+4. Enter the project directory: cd sozogo
+5. Initialize your vagrant box: `vagrant init thoughtbot/ubuntu-14-04-server-with-laptop`
 
 ##Using Vagrant
 
@@ -23,25 +22,13 @@ Vagrant will prompt you for your admin password. This is so it can mount your lo
 
 (The first time you do this, it will take a while as it downloads the VM image and installs it. Go grab a coffee.)
 
-**Note to Linux users**: Your Sozogo directory cannot be on an ecryptfs mount or you will receive an error: exportfs: /home/your/path/to/sozogo does not support NFS export
-
-**Note to OSX/Linux users**: Vagrant will mount your local files via an NFS share. Therefore, make sure that NFS is installed or else you'll receive the error message:
-
-```
-Mounting NFS shared folders failed. This is most often caused by the NFS
-client software not being installed on the guest machine. Please verify
-that the NFS client software is properly installed, and consult any resources
-specific to the linux distro you're using for more information on how to
-do this.
-```
-For example, on Ubuntu, you can install NFS support by installing nfs-kernel-server with apt-get install.
-
-Once the machine has booted up, you can shell into it by typing:
-
 ```
 vagrant ssh
 ```
-The sozogo code is found in the /vagrant directory in the image.
+The sozogo code is found in the /vagrant directory in the image :
+```
+cd /vagrant
+```
 
 Note to Windows users: You cannot run ```vagrant ssh``` from a cmd prompt; you'll receive the error message:
 
