@@ -65,6 +65,6 @@ Once your VM is up to date, you can start a rails instance using the following c
 ```
 bundle exec rails s
 ```
-In a few seconds, rails will start serving pages. To access them, open a web browser to http://localhost:4000 - if it all worked you should see sozogo. Congratulations, you are ready to start working!
+In a few seconds, rails will start serving pages. To access them, open a web browser to http://localhost:3000 - if it all worked you should see sozogo. Congratulations, you are ready to start working!
 
 You can now edit files on your local file system, using your favorite text editor or IDE. When you reload your web browser, it should have the latest changes.
