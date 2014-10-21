@@ -4,7 +4,7 @@ The following instructions will automatically download and provision a virtual m
 
 Shoutout to the [Discorse getting started page](https://github.com/discourse/discourse/blob/master/docs/VAGRANT.md) for providing a solid template for this page
 
-1. Install Vagrant: http://www.vagrantup.com/ (We require Vagrant 1.1.2+ or later)
+1. Install Vagrant: http://www.vagrantup.com/
 2. Open a terminal
 3. Clone the project: git clone https://github.com/sozogo/sozogo.git
 4. Enter the project directory: cd sozogo
