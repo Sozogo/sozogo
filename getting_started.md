@@ -6,7 +6,7 @@ Shoutout to the [Discorse getting started page](https://github.com/discourse/dis
 
 1. Install Vagrant: http://www.vagrantup.com/ (We require Vagrant 1.1.2+ or later)
 2. Open a terminal
-3. Clone the project: git clone https://github.com/jahbrewski/sozogo.git
+3. Clone the project: git clone https://github.com/sozogo/sozogo.git
 4. Enter the project directory: cd sozogo
 5. Initialize your vagrant box: `vagrant init thoughtbot/ubuntu-14-04-server-with-laptop`
 
