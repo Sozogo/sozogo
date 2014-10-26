@@ -1,5 +1,5 @@
 # About Sozogo
-We all have unique skills and personalities, something unmatchable, unshakable, something that makes us.. well, us. Here, we are seeking to create an opportunity for everyone to use their skills to make this world a better and brighter place for everyone. [Get involved today](#im-ready-to-help)
+SozoGo is a website that seeks to unite the Church in love and action by giving you the opportunity to volunteer and make the difference you know you were made for. Churches and Christian organizations can make a profile and post volunteering events. Volunteers can then find these events and discover where they would like to serve, searching by their own personal interests, skills, and other criteria. Anyone and everyone can join for free and volunteer today! Plus, earn rewards and badges for volunteering!. [Get involved today](#im-ready-to-help)
 
 ## I'm ready to help!
 Great! We really appreciate it. Just a few questions:
