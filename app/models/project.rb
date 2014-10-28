@@ -5,6 +5,7 @@ class Project < ActiveRecord::Base
   validates :title, length: { maximum: 60 }
   validates_presence_of :description
   validate :validate_created_at
+  validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
 
   private
   def convert_created_at

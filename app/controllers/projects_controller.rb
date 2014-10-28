@@ -30,6 +30,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :month, :day, :year)
+    params.require(:project).permit(:title, :description, :month, :day, :year, :number_of_volunteers_needed)
   end
 end
