@@ -16,6 +16,9 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     visit "/projects/new"
     fill_in('Title', :with => project.title)
     fill_in('Description', :with => project.description)
+    select('01', :from => 'project_month')
+    select('01', :from => 'project_day')
+    select('2019', :from => 'project_year')
 
     assert_difference 'Project.count', 1 do
       click_button('Create Project')
