@@ -6,4 +6,4 @@ env:
 script:
   - RAILS_ENV=test bundle exec rake --trace db:migrate test
 before_script:
-  - psql -c 'reate database sozogo_test' -U postgres
+  - psql -c 'create database sozogo_test' -U postgres
