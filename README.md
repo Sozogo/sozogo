@@ -1,3 +1,4 @@
+![travis](https://api.travis-ci.org/Sozogo/sozogo.svg?branch=master)
 # About Sozogo
 SozoGo is a website that seeks to unite the Church in love and action by giving you the opportunity to volunteer and make the difference you know you were made for. Churches and Christian organizations can make a profile and post volunteering events. Volunteers can then find these events and discover where they would like to serve, searching by their own personal interests, skills, and other criteria. Anyone and everyone can join for free and volunteer today! Plus, earn rewards and badges for volunteering!. [Get involved today](#im-ready-to-help)
 
