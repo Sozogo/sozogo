@@ -3,7 +3,7 @@
   $hero-background-bottom: adjust-hue($hero-background-top, -70);
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
+  $hero-image: 'building_home.jpg';
 
   @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
 
@@ -33,6 +33,7 @@
     }
 
     .hero-copy {
+      background-color: rgba(0, 0, 0, 0.6);
       text-align: center;
       
       h1 {
@@ -50,10 +51,11 @@
         margin-bottom: 3em; 
         font-weight: 200;
         line-height: 1.4em;
+        padding: 10px;
 
         @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 40%;
+          font-size: 1.5em;
+          max-width: 60%;
         }
       }
     }
@@ -78,7 +80,7 @@
   $grid-item-columns: 3;
   $grid-item-big-columns: 9;
   $grid-item-color: white;
-  $grid-item-height: 14em;
+  $grid-item-height: 10em;
   padding-top: 10px;
 
   @include clearfix;
