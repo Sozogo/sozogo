@@ -14,10 +14,12 @@ class Project < ActiveRecord::Base
   end
 
   def save_schedule(rule_hash)
-    rule = RecurringSelect.dirty_hash_to_rule(rule_hash)
-    schedule = IceCube::Schedule.new
-    schedule.add_recurrence_rule rule
-    self.recurring_rules = schedule
+    if rule_hash
+      rule = RecurringSelect.dirty_hash_to_rule(rule_hash)
+      schedule = IceCube::Schedule.new
+      schedule.add_recurrence_rule rule
+      self.recurring_rules = schedule
+    end
   end
 
   private

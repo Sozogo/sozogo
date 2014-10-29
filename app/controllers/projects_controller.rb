@@ -16,7 +16,9 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.save_start_date(params["project"])
-    @project.save_schedule(params["project"]["recurring_rules_attribute"])
+    unless params["project"]["recurring_rules_attribute"] == "null"
+      @project.save_schedule(params["project"]["recurring_rules_attribute"])
+    end
 
     if @project.save!
       flash[:notice] = "You successfully created a new project"
