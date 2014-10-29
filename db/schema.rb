@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028023728) do
+ActiveRecord::Schema.define(version: 20141029033626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141028023728) do
     t.datetime "updated_at"
     t.datetime "start_date"
     t.integer  "number_of_volunteers_needed"
+    t.text     "recurring_rules"
   end
 
 end

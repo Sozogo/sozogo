@@ -8,6 +8,8 @@
       .month.inline= f.select(:month, ('01'..'12').to_a)
       .day.inline= f.select(:day, ('01'..'31').to_a)
       .year.inline= f.select(:year, ((Time.now.year)..Time.now.year + 5).to_a)
+    .recurring
+      = f.select_recurring :recurring_rules_attribute
     .description
       = f.label :description
       = f.text_area :description, rows: 10
