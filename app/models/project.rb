@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessor :month, :day, :year, :hour, :minute, :ampm, :recurring_rules_attribute
+  attr_accessor :month, :day, :year, :recurring_rules_attribute
 
   validates_presence_of :title
   validates :title, length: { maximum: 60 }
@@ -9,8 +9,8 @@ class Project < ActiveRecord::Base
 
   serialize :recurring_rules, IceCube::Schedule
 
-  def save_start_date(project_hash)
-    self.start_date = DateTime.civil(project_hash["year"].to_i, project_hash["month"].to_i, project_hash["day"].to_i)
+  def save_start_date(params)
+    self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
   end
 
   def save_schedule(rule_hash)

@@ -14,8 +14,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    binding.pry
     @project = Project.new(project_params)
-    @project.save_start_date(params["project"])
+    @project.save_start_date(params)
     unless params["project"]["recurring_rules_attribute"] == "null"
       @project.save_schedule(params["project"]["recurring_rules_attribute"])
     end
@@ -33,6 +34,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :month, :day, :year, :number_of_volunteers_needed, :recurring_rules_attribute)
+    params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :number_of_volunteers_needed, :recurring_rules_attribute)
   end
 end
