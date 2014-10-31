@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @attributes = ProjectAttribute.all
   end
 
   def index
@@ -33,6 +34,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :end_time, :number_of_volunteers_needed, :recurring_rules_attribute)
+    params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :end_time, :number_of_volunteers_needed, :recurring_rules_attribute, :project_attribute_ids => [])
   end
 end

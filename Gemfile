@@ -26,6 +26,10 @@ group :development do
   gem "binding_of_caller"
   gem "pry"
 end
+
+group :test do
+  gem "pry"
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 

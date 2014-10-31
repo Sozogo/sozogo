@@ -6,8 +6,11 @@ class Project < ActiveRecord::Base
   validates_presence_of :description
   validate :validate_created_at
   validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
-
   serialize :recurring_rules, IceCube::Schedule
+
+  has_and_belongs_to_many :project_attributes, join_table: "projects_project_attributes"
+  has_many :professions
+  has_one :focus
 
   def save_start_date(params)
     self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)

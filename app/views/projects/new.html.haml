@@ -23,5 +23,10 @@
       = f.label :number_of_volunteers_needed
     .volunteers-needed
       = f.text_field :number_of_volunteers_needed, class: "small-input"
+    .attributes
+      = hidden_field_tag "project[project_attribute_ids][]", nil
+      - ProjectAttribute.all.each do |project_attribute|
+        = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
+        = label_tag dom_id(project_attribute), project_attribute.name
         
     = f.submit "Create Project"

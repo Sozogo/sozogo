@@ -19,10 +19,13 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     select('01', :from => 'project_month')
     select('01', :from => 'project_day')
     select('2019', :from => 'project_year')
+    check(project_attributes(:youth_involved).name)
 
     assert_difference 'Project.count', 1 do
       click_button('Create Project')
     end
+
+    assert_equal "Youth involved", Project.last.project_attributes.first.name
     #assert_equal "/", path
 
     #visit project index
