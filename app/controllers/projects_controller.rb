@@ -14,7 +14,6 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    binding.pry
     @project = Project.new(project_params)
     @project.save_start_date(params)
     unless params["project"]["recurring_rules_attribute"] == "null"
