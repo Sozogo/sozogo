@@ -13,7 +13,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    project = Project.create( :title => "Help widows.", :description => "Come help widows", :month => "01", :day => "01", :year => "2020")
+    project = projects(:widows)
     get :show, { 'id' => project.id }
     assert_response :success
     assert_not_nil assigns(:project)

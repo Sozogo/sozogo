@@ -42,5 +42,8 @@
     .focus
       = f.label "Project Focus"
       = collection_select(:project, :focus_id, Focus.all, :id, :name)
+    .volunter-instructions
+      = f.label :volunteer_instructions
+      = f.text_area :volunteer_instructions, rows: 5
     .submit
       = f.submit "Create Project"

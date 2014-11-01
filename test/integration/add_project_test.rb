@@ -22,21 +22,25 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     check(project_attributes(:youth_involved).name)
     select('Community', :from => 'project_focus_id')
     check(professions(:agriculture).name)
+    fill_in('Volunteer instructions', :with => 'Park across the street. Meet in the atrium.')
 
     assert_difference 'Project.count', 1 do
       click_button('Create Project')
     end
+    
+    @project = Project.last
 
-    assert_equal "Youth involved", Project.last.project_attributes.first.name
-    assert_equal "Community", Project.last.focus.name
-    assert_equal "Agriculture, food and natural resources", Project.last.professions.first.name
+    assert_equal "Youth involved", @project.project_attributes.first.name
+    assert_equal "Community", @project.focus.name
+    assert_equal "Agriculture, food and natural resources", @project.professions.first.name
+    assert_equal "Park across the street. Meet in the atrium.", @project.volunteer_instructions
 
     #visit project index
     visit "/projects"
     assert page.has_content? project.title
 
     #vist project show
-    visit "/projects/#{Project.last.id}"
+    visit "/projects/#{@project.id}"
     assert page.has_content? project.description
   end
 end
