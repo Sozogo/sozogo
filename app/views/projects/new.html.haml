@@ -11,7 +11,6 @@
     .time
       = f.label "Start Time"
       = f.time_select :start_time, { include_seconds: false, ampm: true }
-
       = f.label "End Time"
       = f.time_select :end_time, { include_seconds: false, ampm: true }
     .recurring
@@ -24,9 +23,13 @@
     .volunteers-needed
       = f.text_field :number_of_volunteers_needed, class: "small-input"
     .attributes
+      = f.label "Project Attributes"
       = hidden_field_tag "project[project_attribute_ids][]", nil
       - ProjectAttribute.all.each do |project_attribute|
-        = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
-        = label_tag dom_id(project_attribute), project_attribute.name
-        
+        .attribute
+          = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
+          = label_tag dom_id(project_attribute), project_attribute.name
+    .focus
+      = f.label "Project Focus"
+      = collection_select(:project, :focus_id, Focus.all, :id, :name)
     = f.submit "Create Project"

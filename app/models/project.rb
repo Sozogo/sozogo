@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
 
   has_and_belongs_to_many :project_attributes, join_table: "projects_project_attributes"
   has_many :professions
-  has_one :focus
+  belongs_to :focus
 
   def save_start_date(params)
     self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
