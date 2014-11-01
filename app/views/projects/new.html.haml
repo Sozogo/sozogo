@@ -9,27 +9,38 @@
       .day.inline= f.select(:day, days_array )
       .year.inline= f.select(:year, next_n_years_array(5))
     .time
-      = f.label "Start Time"
-      = f.time_select :start_time, { include_seconds: false, ampm: true }
-      = f.label "End Time"
-      = f.time_select :end_time, { include_seconds: false, ampm: true }
-    .recurring
-      = f.label "Recurring?"
-      = f.select_recurring :recurring_rules_attribute
+      .start-time
+        = f.label "Start Time"
+        = f.time_select :start_time, { include_seconds: false, ampm: true }
+      .end-time
+        = f.label "End Time"
+        = f.time_select :end_time, { include_seconds: false, ampm: true }
+      .recurring
+        = f.label "Recurring?"
+        = f.select_recurring :recurring_rules_attribute
     .description
       = f.label :description
       = f.text_area :description, rows: 10
-      = f.label :number_of_volunteers_needed
+    %section.container
+      .professions
+        = f.label "Related Professions"
+        = hidden_field_tag "project[profession_ids][]", nil
+        - Profession.all.each do |profession|
+          .profession
+            = check_box_tag "project[profession_ids][]", profession.id, @project.profession_ids.include?(profession.id), id: dom_id(profession)
+            = label_tag dom_id(profession), profession.name
+      .attributes
+        = f.label "Project Attributes"
+        = hidden_field_tag "project[project_attribute_ids][]", nil
+        - ProjectAttribute.all.each do |project_attribute|
+          .attribute
+            = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
+            = label_tag dom_id(project_attribute), project_attribute.name
     .volunteers-needed
+      = f.label :number_of_volunteers_needed
       = f.text_field :number_of_volunteers_needed, class: "small-input"
-    .attributes
-      = f.label "Project Attributes"
-      = hidden_field_tag "project[project_attribute_ids][]", nil
-      - ProjectAttribute.all.each do |project_attribute|
-        .attribute
-          = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
-          = label_tag dom_id(project_attribute), project_attribute.name
     .focus
       = f.label "Project Focus"
       = collection_select(:project, :focus_id, Focus.all, :id, :name)
-    = f.submit "Create Project"
+    .submit
+      = f.submit "Create Project"

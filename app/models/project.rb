@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
   serialize :recurring_rules, IceCube::Schedule
 
   has_and_belongs_to_many :project_attributes, join_table: "projects_project_attributes"
-  has_many :professions
+  has_and_belongs_to_many :professions
   belongs_to :focus
 
   def save_start_date(params)

@@ -1,6 +1,44 @@
-.attribute {
+.attribute, .profession {
   input, label {
     display: inline;
     font-weight: inherit;
   }
+}
+
+.time {
+  .start-time {
+    float: left;
+  }
+  .end-time, .recurring {
+    float: left;
+    padding-left: 30px;
+  }
+}
+
+.volunteers-needed, .focus {
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.focus {
+  padding-left: 30px;
+}
+
+.description {
+  clear: both;
+}
+
+.attributes {
+  @include span-columns(5);
+}
+
+.professions {
+  @include span-columns(7);
+}
+
+.submit { 
+  clear: both;
+  padding-bottom: 30px;
+  text-align: center;
 }
