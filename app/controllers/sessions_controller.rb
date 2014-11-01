@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @church = Church.authenticate(params[:email], params[:password])
-    if @church
+    @user = User.authenticate(params[:email], params[:password])
+    if @user
       flash[:notice] = "You've been logged in."
-      session[:church_id] = @church.id
+      session[:user_id] = @user.id
       redirect_to "/"
     else
       flash[:alert] = "There was a problem logging you in."
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:church_id] = nil
+    session[:user_id] = nil
     flash[:notice] = "You've been logged out successfully."
     redirect_to "/"
   end

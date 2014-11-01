@@ -20,4 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  am_an_organization: "I am an organization"
+  am_a_volunteer: "I am a volunteer"
+  create_organization: "Create organization"
+  create_volunteer: "Signup"

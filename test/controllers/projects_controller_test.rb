@@ -25,7 +25,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should get new if signed in" do
-    get(:new, {}, {'church_id' => '1' })
+    get(:new, {}, {'user_id' => '1' })
     assert_response :success
   end
 end

@@ -10,4 +10,10 @@ module ApplicationHelper
   def next_n_years_array(n)
     ((Time.now.year)..Time.now.year + n).to_a
   end
+
+  def user_signup_message
+    type = params["type"].downcase
+    translation = "create_" + type
+    I18n.t(translation)
+  end
 end

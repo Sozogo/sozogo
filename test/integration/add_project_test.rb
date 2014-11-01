@@ -3,9 +3,9 @@ require 'test_helper'
 class AddProjectTest < ActionDispatch::IntegrationTest
   test "adding a project" do
 
-    #login as church
+    #login
     visit "/new-session"
-    fill_in "email", with: churches(:cbc).email
+    fill_in "email", with: users(:cbc).email
     fill_in "password", with: "helloworld"
     click_on "Log in"
 

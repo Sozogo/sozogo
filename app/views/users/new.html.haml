@@ -1,5 +1,5 @@
 %h1 Sign Up
-= form_for Church.new do |f|
+= form_for User.new do |f|
   .email
     = f.label :email
     = f.text_field :email
@@ -9,4 +9,4 @@
   .password_confirmation
     = f.label :password_confirmation
     = f.password_field :password_confirmation
-  = f.submit "Sign Up"
+  = f.submit user_signup_message, :id => "new-user-submit"

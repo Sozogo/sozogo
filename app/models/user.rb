@@ -1,4 +1,4 @@
-class Church < ActiveRecord::Base
+class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
   validates_confirmation_of :password
@@ -10,9 +10,9 @@ class Church < ActiveRecord::Base
   end
 
   def self.authenticate(email, password)
-    church = Church.where(email: email).first
-    if church && church.password_hash == BCrypt::Engine.hash_secret(password, church.password_salt)
-      church
+    user = User.where(email: email).first
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
     else
       nil
     end

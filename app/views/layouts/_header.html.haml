@@ -11,7 +11,7 @@
       %li.nav-link.logo
         %a.logo{:href => "/"}
           %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
-      - if current_church
+      - if current_user
         %li.nav-link
           = link_to "Log Out", destroy_session_path
         %li.nav-link

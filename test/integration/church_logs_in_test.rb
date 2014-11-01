@@ -5,7 +5,7 @@ class ChurchLogsInTest < ActionDispatch::IntegrationTest
     get "/new-session"
     assert_response :success
 
-    post_via_redirect "/create-session", email: churches(:cbc).email, password: "helloworld"
+    post_via_redirect "/create-session", email: users(:cbc).email, password: "helloworld"
     assert_equal "/", path
   end
 end

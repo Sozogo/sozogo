@@ -1,10 +1,10 @@
-class ChurchesController < ApplicationController
+class UsersController < ApplicationController
   def new
   end
 
   def create
-    @church = Church.new(church_params)
-    if @church.save
+    @user = User.new(user_params)
+    if @user.save
       flash[:notice] = "Welcome to sozogo!"
       redirect_to "/"
     else
@@ -15,7 +15,7 @@ class ChurchesController < ApplicationController
 
   private
 
-  def church_params
-    params.require(:church).permit(:email, :password, :password_confirmation)
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end

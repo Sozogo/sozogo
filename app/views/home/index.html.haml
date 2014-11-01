@@ -5,7 +5,7 @@
     .hero-copy
       %h1 We are Sozogo
       %p SozoGo is a website that seeks to unite the Church in love and action by giving you the opportunity to volunteer and make a difference.
-    = button_to 'Sign Up', {:controller => "churches", :action => "new"}, :method => :get
+    = button_to 'Sign Up', {:controller => "home", :action => "signup"}, :method => :get
 %section.grid-items
   %a.grid-item{:href => "#{about_path}"}
     = image_tag("eye_lg.png")
