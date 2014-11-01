@@ -25,11 +25,22 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def display_duration
+    start_time = self.start_time.strftime("%I:%M %p")
+    end_time   = self.end_time.strftime("%I:%M %p")
+    if start_time == end_time
+      return start_time
+    else
+      return start_time + "-" + end_time
+    end
+  end
+    
+
   private
   def convert_created_at
     begin
       self.start_date = DateTime.civil(self.year.to_i, self.month.to_i, self.day.to_i)
-      self.start_date.to_time >= Time.now
+      self.start_date.to_time + 1.day >= Time.now.midnight
     rescue ArgumentError
       false
     end

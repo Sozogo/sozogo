@@ -1,3 +1,7 @@
 %ul
-  %li= @project.title
-  %li= @project.description
+  %li= "Title: " + @project.title
+  %li= "Description: " + @project.description
+  - if @project.number_of_volunteers_needed
+    %li= "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
+  %li= "Start Date: " + @project.start_date.strftime("%b %d %Y")
+  %li= "Time: " + @project.display_duration

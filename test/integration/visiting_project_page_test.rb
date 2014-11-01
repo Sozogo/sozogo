@@ -10,6 +10,7 @@ class VisitingProjectPagesTest < ActionDispatch::IntegrationTest
   test "visiting project detail page" do
     visit "/projects/#{projects(:widows).id}"
     assert page.has_content? projects(:widows).description
+    assert page.has_content? projects(:widows).number_of_volunteers_needed
   end
 
 end
