@@ -37,8 +37,10 @@
   @include span-columns(7);
 }
 
-.first-name, .last-name, .city, .email {
-  @include span-columns(6);
+.users-new {
+  .first-name, .last-name, .city, .email {
+    @include span-columns(6);
+  }
 }
 
 .submit { 
