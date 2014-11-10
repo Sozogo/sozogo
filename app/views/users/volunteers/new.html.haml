@@ -28,6 +28,9 @@
         .focus
           = check_box_tag "volunteer[focus_ids][]", focus.id, @user.focus_ids.include?(focus.id), id: dom_id(focus)
           = label_tag dom_id(focus), focus.name
+  .professions
+    = f.label "Profession"
+    = collection_select(:volunteer, :profession_id, Profession.all, :id, :name)
   .password.clear
     = f.label :password
     = f.password_field :password

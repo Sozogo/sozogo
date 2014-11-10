@@ -14,5 +14,6 @@ volunteer:
   password_salt: $2a$10$lhlNLARGQRmE4UPVSoxlXu
   email: volunteer@brewerdigital.com
   password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$lhlNLARGQRmE4UPVSoxlXu") %>
+  city: Nashville
   type: Volunteer
 
