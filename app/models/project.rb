@@ -53,7 +53,6 @@ class Project < ActiveRecord::Base
   end
 
   def validate_user_organization
-    binding.pry
     errors.add("User", " must be signed up as an organization to create a new project.") unless self.user.type == "Organization"
   end
 end
