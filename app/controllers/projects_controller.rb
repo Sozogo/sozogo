@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
     @project.save_start_date(params)
     unless params["project"]["recurring_rules_attribute"] == "null"
       @project.save_schedule(params["project"]["recurring_rules_attribute"])

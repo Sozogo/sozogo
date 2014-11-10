@@ -1,0 +1,38 @@
+%h1 Sign Up
+= form_for @user, :url => { :action => :create, :type => @type } do |f|
+  - if @user.errors.any?
+    .error-explanation
+      %h2= pluralize(@user.errors.count, "error") + " prohibited this user from being saved:"
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+
+  .row
+    .first-name
+      = f.label :first_name
+      = f.text_field :first_name
+    .last-name
+      = f.label :last_name
+      = f.text_field :last_name
+  .row
+    .city
+      = f.label :city
+      = f.text_field :city
+    .email
+      = f.label :email
+      = f.text_field :email
+  %section.container
+    = f.label "Interests"
+    .focuses.clear
+      = hidden_field_tag "volunteer[focus_ids][]", nil
+      - Focus.all.each do |focus|
+        .focus
+          = check_box_tag "volunteer[focus_ids][]", focus.id, @user.focus_ids.include?(focus.id), id: dom_id(focus)
+          = label_tag dom_id(focus), focus.name
+  .password.clear
+    = f.label :password
+    = f.password_field :password
+  .password_confirmation
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  = f.submit user_signup_message, :id => "new-user-submit"

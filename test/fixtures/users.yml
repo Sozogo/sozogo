@@ -6,3 +6,13 @@ cbc:
   email: cbc@cbcnashville.com
   password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$iQpPOXJXqn0fb2R/1UydFu") %>
   type: Organization
+
+volunteer:
+  id: 2
+  first_name: Joel
+  last_name: Brewer
+  password_salt: $2a$10$lhlNLARGQRmE4UPVSoxlXu
+  email: volunteer@brewerdigital.com
+  password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$lhlNLARGQRmE4UPVSoxlXu") %>
+  type: Volunteer
+

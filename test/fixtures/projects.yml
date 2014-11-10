@@ -5,5 +5,6 @@ widows:
   start_date: 2020-10-10
   start_time: <%= Time.now + 1.day %>
   end_time: <%= Time.now + 1.day + 1.hour %> 
+  user_id: 1
 
 

@@ -5,12 +5,14 @@ class Project < ActiveRecord::Base
   validates :title, length: { maximum: 60 }
   validates_presence_of :description
   validate :validate_created_at
+  validate :validate_user_organization
   validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
   serialize :recurring_rules, IceCube::Schedule
 
   has_and_belongs_to_many :project_attributes, join_table: "projects_project_attributes"
   has_and_belongs_to_many :professions
   belongs_to :focus
+  belongs_to :user
 
   def save_start_date(params)
     self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
@@ -34,7 +36,6 @@ class Project < ActiveRecord::Base
       return start_time + "-" + end_time
     end
   end
-    
 
   private
   def convert_created_at
@@ -50,5 +51,9 @@ class Project < ActiveRecord::Base
   def validate_created_at
     errors.add("Created at date", "is invalid.") unless convert_created_at
   end
-    
+
+  def validate_user_organization
+    binding.pry
+    errors.add("User", " must be signed up as an organization to create a new project.") unless self.user.type == "Organization"
+  end
 end

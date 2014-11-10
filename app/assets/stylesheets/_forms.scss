@@ -37,8 +37,25 @@
   @include span-columns(7);
 }
 
+.first-name, .last-name, .city, .email {
+  @include span-columns(6);
+}
+
 .submit { 
   clear: both;
   padding-bottom: 30px;
   text-align: center;
 }
+
+.focuses {
+  @include span-columns(6);
+  .focus {
+    float: none;
+    padding: 0;
+  }
+  input, label {
+    display: inline;
+    font-weight: inherit;
+  }
+}
+    

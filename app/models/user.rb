@@ -2,7 +2,10 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
   validates_confirmation_of :password
-  validates_presence_of :email
+  validates_presence_of :email, :password
+
+  has_many :projects
+  has_and_belongs_to_many :focuses, join_table: "focuses_users"
 
   def encrypt_password
     self.password_salt = BCrypt::Engine.generate_salt

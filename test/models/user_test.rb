@@ -7,6 +7,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not user.save
   end
 
+  test "should not save user when password is not provided" do
+    user = User.new(:email => "joel@brewerdigital.com", :password => "")
+    user.save
+    assert_not user.save
+  end
+   
+
   test "should create password_salt before save" do
     user = User.new(:email => "joel@brewerdigital.com", :password => "helloworld")
     user.save
