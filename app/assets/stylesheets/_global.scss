@@ -19,3 +19,16 @@ section.form {
 .time select { display: inline; }
 
 .clear { clear: both; }
+
+.button {
+  @include button;
+  color: white;
+}
+
+.link-no-style {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
