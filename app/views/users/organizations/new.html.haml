@@ -6,9 +6,40 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
+  .organization-name
+    = f.label :organization_name
+    = f.text_field :organization_name
+  .phone-number
+    = f.label :phone_number
+    = f.text_field :phone_number
+  .organization-contact-name
+    = f.label :organization_contact_name
+    = f.text_field :organization_contact_name
+  .organization-type
+    = f.label :organization_type
+    = f.collection_select(:organization_type, Constants::ORGANIZATION_TYPES, :to_s, :titleize, {:prompt => true})
+  .address
+    = f.label :address
+    = f.text_field :address
   .email
     = f.label :email
     = f.text_field :email
+  %section.container
+    = f.label "Common Events"
+    .focuses.clear
+      = hidden_field_tag "organization[focus_ids][]", nil
+      - Focus.all.each do |focus|
+        .focus
+          = check_box_tag "organization[focus_ids][]", focus.id, @user.focus_ids.include?(focus.id), id: dom_id(focus)
+          = label_tag dom_id(focus), focus.name
+  .statement-of-beliefs
+    = f.label :statement_of_beliefs
+    = "We believe in one God, the Father Almighty, creator of heaven and earth In one Lord Jesus Christ, the only begotten Son of God, who died on the cross, was buried, and rose again on the third day and in the Holy Spirit, the giver of life"
+    .affirm
+      = "Our organization affirms this statement of beliefs"
+      = f.check_box :statement_of_beliefs
+      = f.label :statement_of_beliefs
+
   .password
     = f.label :password
     = f.password_field :password

@@ -38,7 +38,7 @@
 }
 
 .users-new {
-  .first-name, .last-name, .city, .email {
+  .first-name, .last-name {
     @include span-columns(6);
   }
 }

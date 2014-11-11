@@ -2,10 +2,14 @@
 
 cbc:
   id: 1
-  password_salt: $2a$10$iQpPOXJXqn0fb2R/1UydFu
+  password_salt: $2a$10$lhlNLARGQRmE4UPVSoxlXu
   email: cbc@cbcnashville.com
-  password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$iQpPOXJXqn0fb2R/1UydFu") %>
+  password_hash: <%= BCrypt::Engine.hash_secret("helloworld", "$2a$10$lhlNLARGQRmE4UPVSoxlXu") %>
   type: Organization
+  organization_type: Church
+  organization_name: CBC Nashville
+  organization_contact_name: Jared Rankin
+  address: 111 Franklin Pike
 
 volunteer:
   id: 2

@@ -23,9 +23,6 @@ class SignupVolunteerTest < ActionDispatch::IntegrationTest
     assert_difference 'Volunteer.count', 1 do
       click_button('Signup')
     end
-
-    @volunteer = Volunteer.last
-    
   end
 
 end
