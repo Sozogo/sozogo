@@ -20,7 +20,7 @@ class SignupOrganizationTest < ActionDispatch::IntegrationTest
     check(focuses(:community).name)
     fill_in('Password', :with => 'helloworld')
     fill_in('Password confirmation', :with => 'helloworld')
-    #find(:css, "#organization_statement_of_beliefs").set(true)
+    find(:css, "#organization_statement_of_beliefs").set(true)
 
 
     assert_difference 'Organization.count', 1 do

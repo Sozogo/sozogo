@@ -19,14 +19,14 @@ class UsersControllerTest < ActionController::TestCase
   test "should create organization" do
     organization = users(:cbc)
     assert_difference('User.count') do
-      post :create, organization: { email: organization.email, password: "helloworld", organization_type: organization.organization_type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address, statement_of_beliefs: true }, "type" => "Organization"
+      post :create, organization: { email: organization.email, password: "helloworld", organization_type: organization.organization_type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address, statement_of_beliefs: 1 }, "type" => "Organization"
     end
   end
 
   test "should not create organization if terms are not accepted" do
     organization = users(:cbc)
     assert_no_difference('User.count') do
-      post :create, organization: { email: organization.email, organization_type: organization.type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address }, "type" => "Organization"
+      post :create, organization: { email: organization.email, password: "helloworld", organization_type: organization.organization_type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address, statement_of_beliefs: 0 }, "type" => "Organization"
     end
   end
 end
