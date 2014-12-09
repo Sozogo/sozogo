@@ -26,7 +26,7 @@ class UsersControllerTest < ActionController::TestCase
   test "should not create organization if terms are not accepted" do
     organization = users(:cbc)
     assert_no_difference('User.count') do
-      post :create, organization: { email: organization.email, organzation_type: organization.type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address }, "type" => "Organization"
+      post :create, organization: { email: organization.email, organization_type: organization.type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address }, "type" => "Organization"
     end
   end
 end
