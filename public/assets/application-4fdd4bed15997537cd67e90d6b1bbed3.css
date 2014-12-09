@@ -1,0 +1,1521 @@
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+/* line 2, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/extends/_button.scss */
+button,
+input[type="submit"] {
+  border: 1px solid #2459a6;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #89a8d5;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #477DCA;
+  background-image: -webkit-linear-gradient(#477DCA, #2760b2);
+  background-image: linear-gradient(#477DCA, #2760b2);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #1b4f9a;
+  background-clip: padding-box;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 131, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+button:hover:not(:disabled),
+input[type="submit"]:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 0 #628cc8;
+  cursor: pointer;
+  background-color: #3c71bb;
+  background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
+  background-image: linear-gradient(#3c71bb, #255aa5);
+}
+/* line 147, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+button:active:not(:disabled),
+input[type="submit"]:active:not(:disabled), button:focus:not(:disabled),
+input[type="submit"]:focus:not(:disabled) {
+  border: 1px solid #2459a6;
+  box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397;
+}
+/* line 51, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+button:disabled,
+input[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+body {
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5em;
+}
+
+/* line 9, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 16, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 20, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 24, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 28, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 32, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 36, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 40, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 44, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+a {
+  color: #477DCA;
+  text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+/* line 49, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+a:hover {
+  color: #2c5999;
+}
+/* line 53, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+a:active, a:focus {
+  color: #2c5999;
+  outline: none;
+}
+
+/* line 59, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 67, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 72, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #DDD;
+  cursor: help;
+}
+
+/* line 77, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+address {
+  display: block;
+  margin: 0 0 0.75em;
+}
+
+/* line 82, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+hgroup {
+  margin-bottom: 0.75em;
+}
+
+/* line 86, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+del {
+  color: #595959;
+}
+
+/* line 90, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+blockquote {
+  border-left: 2px solid #DDD;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 97, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic;
+}
+/* line 101, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_typography.scss */
+cite:before {
+  content: '\2014 \00A0';
+}
+
+/* line 10, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 17, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* line 25, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 29, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+label.required:after {
+  content: "*";
+}
+/* line 33, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 38, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 0.1875em;
+  border: 1px solid #DDD;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+/* line 53, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+textarea:hover,
+input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+select[multiple=multiple]:hover {
+  border-color: #c4c4c4;
+}
+/* line 57, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+textarea:focus,
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+select[multiple=multiple]:focus {
+  border-color: #477DCA;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  outline: none;
+}
+
+/* line 64, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 68, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 72, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 77, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+input[type="file"] {
+  width: 100%;
+}
+
+/* line 81, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* line 87, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 97, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_forms.scss */
+.inline {
+  display: inline-block;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_tables.scss */
+td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.75em 0;
+}
+
+/* line 20, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_tables.scss */
+tr, td, th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_lists.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 19, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_lists.scss */
+dl {
+  line-height: 1.5em;
+  margin-bottom: 0.75em;
+}
+/* line 23, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/bitters/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 2, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.attribute input, .attribute label, .profession input, .profession label {
+  display: inline;
+  font-weight: inherit;
+}
+
+/* line 9, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.time .start-time {
+  float: left;
+}
+/* line 12, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.time .end-time, .time .recurring {
+  float: left;
+  padding-left: 30px;
+}
+
+/* line 18, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.volunteers-needed, .focus {
+  float: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 24, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.focus {
+  padding-left: 30px;
+}
+
+/* line 28, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.description {
+  clear: both;
+}
+
+/* line 32, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.attributes {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+.attributes:last-child {
+  margin-right: 0;
+}
+
+/* line 36, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.professions {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+.professions:last-child {
+  margin-right: 0;
+}
+
+/* line 41, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.users-new .first-name, .users-new .last-name {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+.users-new .first-name:last-child, .users-new .last-name:last-child {
+  margin-right: 0;
+}
+
+/* line 46, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.submit {
+  clear: both;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* line 52, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.focuses {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+.focuses:last-child {
+  margin-right: 0;
+}
+/* line 54, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.focuses .focus {
+  float: none;
+  padding: 0;
+}
+/* line 58, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.focuses input, .focuses label {
+  display: inline;
+  font-weight: inherit;
+}
+
+/* line 64, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_forms.scss */
+.church-fields {
+  display: none;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation {
+  background-color: #E7F1EC;
+  border-bottom: 1px solid #d4e6dd;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  height: 60px;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 23, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .mobile-logo {
+  display: inline;
+  float: left;
+  max-height: 60px;
+  padding-left: 1em;
+}
+/* line 29, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .mobile-logo img {
+  max-height: 60px;
+  opacity: .6;
+  padding: .8em 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 23, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation .mobile-logo {
+    display: none;
+  }
+}
+/* line 40, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .centered-navigation-menu-button {
+  color: rgba(51, 51, 51, 0.7);
+  display: block;
+  float: right;
+  font-weight: 700;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 40, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation .centered-navigation-menu-button {
+    display: none;
+  }
+}
+/* line 54, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .centered-navigation-menu-button:hover {
+  color: #333;
+}
+/* line 61, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .centered-navigation-wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 999;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+.centered-navigation .centered-navigation-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+.centered-navigation .centered-navigation-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 68, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul.centered-navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  z-index: 99999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 68, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.centered-navigation-menu {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 86, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation .nav-link:first-child {
+    margin-left: 2.2em;
+  }
+}
+/* line 92, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul li.nav-link {
+  background: #E7F1EC;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 1em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 92, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+  }
+  /* line 107, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul li.nav-link a {
+  color: rgba(51, 51, 51, 0.7);
+  display: inline-block;
+}
+/* line 117, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul li.nav-link a:hover {
+  color: #333;
+}
+/* line 123, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.logo.nav-link {
+  display: none;
+  line-height: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 123, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation li.logo.nav-link {
+    display: inline;
+  }
+}
+/* line 132, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation .logo img {
+  margin-bottom: -0.66667em;
+  max-height: 2em;
+  opacity: .6;
+}
+/* line 140, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 140, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation li.more.nav-link {
+    padding-right: 1em;
+  }
+}
+/* line 147, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 151, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more.nav-link a {
+  margin-right: 1em;
+}
+/* line 155, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 159, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more.nav-link > a:after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  color: rgba(51, 51, 51, 0.7);
+  content: '\25BE';
+}
+/* line 166, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 170, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more a {
+  padding-right: 1em;
+}
+/* line 174, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 174, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation li.more > a {
+    margin-right: 1em;
+  }
+}
+/* line 182, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more > a:after {
+  content: '›';
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.5em;
+}
+/* line 190, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 166, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation li.more {
+    padding-right: 1em;
+    position: relative;
+  }
+}
+/* line 200, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 200, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu {
+    left: -1em;
+    position: absolute;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 210, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu .submenu {
+    left: 11.8em;
+    top: 0;
+  }
+}
+/* line 217, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 217, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu li {
+    line-height: 46.15385px;
+  }
+  /* line 224, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 0.1875em;
+    border-top-right-radius: 0.1875em;
+  }
+  /* line 229, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
+    padding-bottom: .7em;
+  }
+}
+/* line 236, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+.centered-navigation ul.submenu li a {
+  background-color: #ddebe4;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 236, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_navigation.scss */
+  .centered-navigation ul.submenu li a {
+    background-color: #E7F1EC;
+    padding-left: 1em;
+    text-align: left;
+    width: 12em;
+  }
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero {
+  background: url("building_home.jpg"), -webkit-linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
+  background: url("building_home.jpg"), linear-gradient(10deg, #217142, #214271), no-repeat #214271 scroll;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 4em;
+  margin-top: 10px;
+}
+/* line 16, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-logo img {
+  height: 3em;
+  margin-bottom: 2.5em;
+}
+/* line 21, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-inner {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+.hero .hero-inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 29, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-inner button {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: white;
+  background-image: -webkit-linear-gradient(white, #e3e3e3);
+  background-image: linear-gradient(white, #e3e3e3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+  background-clip: padding-box;
+  border: 1px solid #dfd8d8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: white;
+  background-image: -webkit-linear-gradient(white, #e5e0e0);
+  background-image: linear-gradient(white, #e5e0e0);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+  background-clip: padding-box;
+  font-size: 1em;
+  outline: none;
+}
+/* line 131, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.hero .hero-inner button:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 0 white;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
+  background-image: linear-gradient(#f2f2f2, #dbdbdb);
+}
+/* line 147, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
+  border: 1px solid #dbdbdb;
+  box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4;
+}
+/* line 131, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.hero .hero-inner button:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 0 white;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  background-image: -webkit-linear-gradient(#f2f2f2, #ded8d8);
+  background-image: linear-gradient(#f2f2f2, #ded8d8);
+}
+/* line 147, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.hero .hero-inner button:active:not(:disabled), .hero .hero-inner button:focus:not(:disabled) {
+  border: 1px solid #dfd8d8;
+  box-shadow: inset 0 0 8px 4px #d7d1d1, inset 0 0 8px 4px #d7d1d1;
+}
+/* line 51, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.hero .hero-inner button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* line 35, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-inner .hero-copy {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+/* line 39, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-inner .hero-copy h1 {
+  font-size: 1.6em;
+  margin-bottom: .5em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 39, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .hero .hero-inner .hero-copy h1 {
+    font-size: 1.8em;
+  }
+}
+/* line 48, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.hero .hero-inner .hero-copy p {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: auto;
+  margin-bottom: 3em;
+  font-weight: 200;
+  line-height: 1.4em;
+  padding: 10px;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 48, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .hero .hero-inner .hero-copy p {
+    font-size: 1.5em;
+    max-width: 60%;
+  }
+}
+
+/* line 68, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items {
+  padding-top: 10px;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+.grid-items:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 88, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  height: 10em;
+  background: #6b83a6;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  padding: 2em;
+  border-top: 0;
+  border-bottom: 9px solid white;
+  border-left: 4.5px solid white;
+  border-right: 4.5px solid white;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 88, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .grid-items .grid-item {
+    width: 25%;
+  }
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(1) {
+  background-color: #6b83a6;
+  box-shadow: inset 0px 0px 1px 2px #536a8b;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(1):hover {
+  background-color: #536a8b;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(2) {
+  background-color: #3581A5;
+  box-shadow: inset 0px 0px 1px 2px #29637e;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(2):hover {
+  background-color: #29637e;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(3) {
+  background-color: #5FBEBE;
+  box-shadow: inset 0px 0px 1px 2px #44a6a6;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(3):hover {
+  background-color: #44a6a6;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(4) {
+  background-color: #98C79A;
+  box-shadow: inset 0px 0px 1px 2px #77b57a;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(4):hover {
+  background-color: #77b57a;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(5) {
+  background-color: #A7A891;
+  box-shadow: inset 0px 0px 1px 2px #909175;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(5):hover {
+  background-color: #909175;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(6) {
+  background-color: #BDCC97;
+  box-shadow: inset 0px 0px 1px 2px #a7bb75;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(6):hover {
+  background-color: #a7bb75;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 108, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(7) {
+  background-color: #979EA0;
+  box-shadow: inset 0px 0px 1px 2px #7c8588;
+}
+/* line 112, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item:nth-child(7):hover {
+  background-color: #7c8588;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* line 122, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item img {
+  display: block;
+  height: 3em;
+  margin: auto;
+  margin-bottom: 1em;
+}
+/* line 129, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item h1 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: .4em;
+}
+/* line 135, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item p {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (min-width: 40em) {
+  /* line 135, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .grid-items .grid-item p {
+    max-width: 70%;
+  }
+}
+/* line 143, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item-big {
+  text-align: left;
+  height: auto;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 143, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .grid-items .grid-item-big {
+    width: 75%;
+  }
+}
+/* line 149, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item-big p {
+  padding-bottom: 20px;
+  margin: 0;
+}
+@media screen and (min-width: 40em) {
+  /* line 149, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+  .grid-items .grid-item-big p {
+    max-width: 60%;
+  }
+}
+/* line 158, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.grid-items .grid-item-image {
+  background: url(/images/lake-transparent.png);
+  background-color: #6b83a6;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+/* line 166, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.more-info {
+  margin-left: 4.5px;
+  padding: 20px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  background-color: #909175;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+.more-info:last-child {
+  margin-right: 0;
+}
+/* line 172, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.more-info h1 {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: .4em;
+}
+/* line 178, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_home.scss */
+.more-info p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_static_pages.scss */
+.individual {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 6, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_static_pages.scss */
+.organization {
+  text-align: center;
+  margin: 20px;
+}
+
+/* line 1, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+section.main-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+section.main-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 5, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+section.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 15, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+section.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 9, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+section.form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  padding-top: 20px;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/neat-1.7.0/app/assets/stylesheets/grid/_span-columns.scss */
+section.form:last-child {
+  margin-right: 0;
+}
+
+/* line 15, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.center {
+  text-align: center;
+}
+
+/* line 17, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.small-input {
+  width: 100px !important;
+}
+
+/* line 19, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.time select {
+  display: inline;
+}
+
+/* line 21, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.clear {
+  clear: both;
+}
+
+/* line 23, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.button {
+  border: 1px solid #076fe4;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #8ebcf1;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #4294f0;
+  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
+  background-image: linear-gradient(#4294f0, #0776f3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #0065d6;
+  background-clip: padding-box;
+  color: white;
+}
+/* line 131, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.button:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 0 #60a2ec;
+  cursor: pointer;
+  background-color: #2f87ea;
+  background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
+  background-image: linear-gradient(#2f87ea, #086fe3);
+}
+/* line 147, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.button:active:not(:disabled), .button:focus:not(:disabled) {
+  border: 1px solid #076fe4;
+  box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3;
+}
+/* line 51, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_button.scss */
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* line 29, /Users/joelbrewer/Development/Repos/sozogo/app/assets/stylesheets/_global.scss */
+.link-no-style a {
+  color: inherit;
+  text-decoration: none;
+}
+/* -------- resets ---------------*/
+/* line 5, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder {
+  font-size: 14px;
+  color: black;
+}
+/* line 6, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder a {
+  color: black;
+}
+/* line 7, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder input[type=button] {
+  font: small/normal Arial,sans-serif;
+  background: #F5F5F5;
+  color: #444;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-weight: bold;
+  height: 27px;
+  line-height: 27px;
+  outline: none;
+  padding: 0 8px;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#f1f1f1));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #f5f5f5, #f1f1f1);
+  /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f5f5f5',EndColorStr='#f1f1f1');
+}
+/* line 16, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder input[type=button]:hover {
+  border-color: #aaa;
+  color: #222;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 17, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder input[type=button]:focus {
+  border-color: #1E90FF;
+}
+/* line 18, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder input[type=button]:active {
+  border-color: #1E90FF;
+}
+
+/*------- defaults ------------ */
+/* line 23, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder {
+  font-family: helvetica, arial, 'san-serif';
+  color: #222;
+  font-size: 12px;
+}
+
+/*------- specifics ------------ */
+/* line 28, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+select option.bold {
+  font-weight: bold;
+  color: red;
+}
+
+/* line 31, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  padding-left: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 50;
+}
+/* line 32, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog {
+  background-color: #f6f6f6;
+  border: 1px solid #acacac;
+  -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -o-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  display: inline-block;
+  min-width: 200px;
+  margin-left: -125px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 34, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content {
+  padding: 10px;
+}
+/* line 35, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content h1 {
+  font-size: 16px;
+  padding: 0px;
+  margin: 0 0 10px 0;
+}
+/* line 36, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content h1 a {
+  float: right;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-image: url(/assets/recurring_select/cancel.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 39, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content p {
+  padding: 5px 0;
+  margin: 0;
+  line-height: 14px;
+}
+/* line 40, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content p label {
+  margin-right: 10px;
+}
+/* line 43, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content a {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 45, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section {
+  display: none;
+}
+/* line 46, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section label {
+  font-weight: bold;
+}
+/* line 47, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_interval {
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+}
+/* line 49, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder {
+  border-left: 1px solid #ccc;
+  position: relative;
+  margin-top: 5px;
+  height: 26px;
+}
+/* line 50, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a {
+  display: block;
+  padding: 5px 7px;
+  font-size: 14px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 1px 0px;
+  float: left;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+  background-color: #fff;
+}
+/* line 51, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a.selected {
+  background-color: #89a;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -ms-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #9ab, #789);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ab), to(#789));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #9ab, #789);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #9ab, #789);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #9ab, #789);
+  /* Opera 11.10+ */
+}
+/* line 52, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .day_holder a:hover {
+  cursor: pointer;
+  background-color: #dde;
+}
+/* line 56, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week {
+  width: 155px;
+}
+/* line 58, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a {
+  display: inline-block;
+  text-align: center;
+  width: 15px;
+  padding: 5px 3px;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px 1px 1px 1px;
+  margin: -1px 0 0 -1px;
+  line-height: 10px;
+  background-color: #fff;
+  font-weight: bold;
+}
+/* line 59, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a.selected, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a.selected {
+  background-color: #89a;
+  color: #fff;
+  position: relative;
+  background-image: -webkit-linear-gradient(top, #9ab, #789);
+  /* Chrome 10+, Saf5.1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ab), to(#789));
+  /* Saf4+, Chrome */
+  background-image: -moz-linear-gradient(top, #9ab, #789);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #9ab, #789);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #9ab, #789);
+  /* Opera 11.10+ */
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+  text-shadow: 0 1px 1px #333;
+}
+/* line 60, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a:hover, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a:hover {
+  cursor: pointer;
+  background-color: #dde;
+}
+/* line 62, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_day a.end_of_month, .rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week a.end_of_month {
+  width: 81px;
+}
+/* line 64, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week {
+  width: 191px;
+}
+/* line 66, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .rs_calendar_week span {
+  display: inline-block;
+  width: 35px;
+}
+/* line 73, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .freq_option_section .monthly_rule_type span {
+  margin-right: 15px;
+}
+/* line 80, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary {
+  padding: 0px;
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+}
+/* line 81, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary span {
+  font-weight: bold;
+  border-top: 1px solid #fff;
+  display: block;
+  padding: 10px 0 5px 0;
+}
+/* line 82, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary.fetching {
+  color: #999;
+}
+/* line 83, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary.fetching span {
+  background-image: url(/assets/recurring_select/throbber_13x13.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-top: -4px;
+  padding-right: 5px;
+}
+/* line 85, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .rs_summary label {
+  font-weight: normal;
+}
+/* line 88, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls {
+  padding: 10px 0px 5px 0px;
+  min-width: 170px;
+  text-align: center;
+}
+/* line 89, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button] {
+  margin: 0px 5px;
+  width: 70px;
+}
+/* line 90, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].rs_save {
+  color: #333;
+}
+/* line 91, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].rs_cancel {
+  color: #666;
+}
+/* line 92, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog .rs_dialog_content .controls input[type=button].disabled {
+  color: #aaa;
+}
+/* line 98, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog.animated .controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+/* line 99, /Users/joelbrewer/.rvm/gems/ruby-2.0.0-p598/gems/recurring_select-1.2.4/app/assets/stylesheets/recurring_select.css.scss.erb */
+.rs_dialog_holder .rs_dialog.animated .rs_summary, .rs_dialog_holder .rs_dialog.animated .freq_option_section {
+  display: none;
+}

@@ -18,6 +18,22 @@
   .organization-type
     = f.label :organization_type
     = f.collection_select(:organization_type, Constants::ORGANIZATION_TYPES, :to_s, :titleize, {:prompt => true})
+  .church-fields
+    .denomination
+      = f.label :denomination
+      = f.text_field :denomination
+    .pastor
+      = f.label :pastor
+      = f.text_field :pastor
+    .service-times
+      = f.label :service_times
+      = f.text_area :service_times
+    .congregation-size
+      = f.label :congregation_size
+      = f.text_field :congregation_size
+    .church-statement
+      = f.label :church_statement
+      = f.text_area :church_statement
   .address
     = f.label :address
     = f.text_field :address
