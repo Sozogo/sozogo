@@ -22,12 +22,12 @@ class ProjectsController < ApplicationController
       @project.save_schedule(params["project"]["recurring_rules_attribute"])
     end
 
-    if @project.save!
+    if @project.save
       flash[:notice] = "You successfully created a new project"
       redirect_to "/"
     else
       flash[:alert] = "There was a problem creating your project. Please try again."
-      redirect_to :back
+      render "new"
     end
 
   end

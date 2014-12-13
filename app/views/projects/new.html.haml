@@ -1,5 +1,6 @@
 %section.form
   = form_for @project do |f|
+    = render "layouts/errors", resource: @project
     .title
       = f.label :title
       = f.text_field :title

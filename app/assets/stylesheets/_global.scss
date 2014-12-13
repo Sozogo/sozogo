@@ -33,6 +33,13 @@ section.form {
 }
 
 .flash {
-  @include flash($light-yellow);
   margin-top: 0.75em;
 }
+
+.flash-error { @include flash($light-red); }
+
+.flash-notice { @include flash($light-yellow); }
+
+.flash-success { @include flash($light-green); }
+
+.flash-alert { @include flash($light-yellow); }
