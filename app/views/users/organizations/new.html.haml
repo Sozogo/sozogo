@@ -15,6 +15,9 @@
   .organization-contact-name
     = f.label :organization_contact_name
     = f.text_field :organization_contact_name
+  .organization-statement
+    = f.label "Short description of organization"
+    = f.text_area :organization_statement
   .organization-type
     = f.label :organization_type
     = f.collection_select(:organization_type, Constants::ORGANIZATION_TYPES, :to_s, :titleize, {:prompt => true})
@@ -31,9 +34,6 @@
     .congregation-size
       = f.label :congregation_size
       = f.text_field :congregation_size
-    .church-statement
-      = f.label :church_statement
-      = f.text_area :church_statement
   .address
     = f.label :address
     = f.text_field :address
