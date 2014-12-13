@@ -23,5 +23,12 @@ class ApplicationController < ActionController::Base
     current_user && current_user.type == "Volunteer"
   end
 
+  def organization_only(message)
+    unless organization?
+      flash[:notice] = message
+      redirect_to "/"
+    end
+  end
+
   helper_method :current_user, :organization?, :volunteer?
 end

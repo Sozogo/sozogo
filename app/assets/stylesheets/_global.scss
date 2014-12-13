@@ -32,3 +32,7 @@ section.form {
   }
 }
 
+.flash {
+  @include flash($light-yellow);
+  margin-top: 0.75em;
+}

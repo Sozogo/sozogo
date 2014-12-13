@@ -16,4 +16,13 @@ module ApplicationHelper
     translation = "create_" + type
     I18n.t(translation)
   end
+
+  def flash_class(level)
+    case level
+    when :notice then "flash flash-notice"
+    when :success then "flash flash-success"
+    when :error then "flash flash-error"
+    when :alert then "flash flash-alert"
+    end
+  end
 end

@@ -8,4 +8,5 @@
   %body{class: controller_name + "-" + controller.action_name }
     = render 'layouts/header'
     %section.main-container 
+      = render 'layouts/flash_messages'
       = yield

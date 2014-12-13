@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
-  before_filter :authorize, :only => :new
+  before_filter :authorize, only: :new
+  before_filter(only: [:new, :create]) { |c| c.organization_only "Sorry, you must be registered as an organization to create new projects" }
 
   def new
     @project = Project.new
