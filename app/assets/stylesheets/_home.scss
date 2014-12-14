@@ -77,7 +77,7 @@
     #BDCC97,
     #979EA0;
   $grid-item-border-size: 9px;
-  $grid-item-columns: 3;
+  $grid-item-columns: 4;
   $grid-item-big-columns: 9;
   $grid-item-color: white;
   $grid-item-height: 10em;
@@ -166,7 +166,7 @@
 .more-info {
   margin-left: 4.5px;
   padding: 20px;
-  @include span-columns(9);
+  @include span-columns(12);
   $item-color: #909175;
   background-color: $item-color;
    h1 {

@@ -14,7 +14,7 @@
       - if current_user
         %li.nav-link
           = link_to "Log Out", destroy_session_path
-        - if organization?
+        - if @user && @user.organization?
           %li.nav-link
             = link_to "Add Project", new_project_path
       - else
