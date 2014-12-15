@@ -4,30 +4,27 @@ class UserTest < ActiveSupport::TestCase
 
   def setup
     @volunteer = users(:volunteer)
-  end
-
-  test "should not save user when email is not provied" do
-    user = User.new
-    assert_not user.save
-  end
-
-  test "should not save user when password is not provided" do
-    user = User.new(:email => "joel@brewerdigital.com", :password => "")
-    user.save
-    assert_not user.save
+    @volunteer.password = "helloworld"
   end
 
   test "should be valid when all attributes are provided" do
-    @volunteer.password = "helloworld"
-    #volunteer = User.new(type: "Volunteer", email: "joel@brewerdigital.com", password: "helloworld", city: "Nashville", first_name: "Joel", last_name: "Brewer")
     assert @volunteer.valid?
   end
 
-  test "should not be valid when first name is not provided" do
+  test "should be invalid when email is not provied" do
+    @volunteer.email = nil
+    assert @volunteer.invalid?
+  end
+
+  test "should be invalid when password is not provided" do
+    @volunteer.password = nil
+    assert @volunteer.invalid?
+  end
+
+  test "should be invalid when first name is not provided" do
     @volunteer.first_name = nil
     assert @volunteer.invalid?
   end
-   
 
   test "should create password_salt before save" do
     user = User.new(:email => "joel@brewerdigital.com", :password => "helloworld")
