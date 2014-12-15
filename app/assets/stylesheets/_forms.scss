@@ -43,15 +43,19 @@
   }
 }
 
+.focuses-container, .languages-container {
+  @include span-columns(6);
+}
+
 .submit { 
   clear: both;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.focuses {
+.focuses, .languages {
   @include span-columns(6);
-  .focus {
+  .focus, .language {
     float: none;
     padding: 0;
   }
@@ -67,4 +71,10 @@
 
 .affirm {
   padding-top: 10px;
+}
+
+.languages-container, .focuses-container {
+  .select2-container {
+    width: 100%;
+  }
 }

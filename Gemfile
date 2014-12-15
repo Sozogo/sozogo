@@ -15,6 +15,7 @@ gem 'bcrypt'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'select2-rails'
 gem 'rails_12factor'
 
 gem 'capybara'

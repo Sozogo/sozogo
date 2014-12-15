@@ -26,6 +26,11 @@ class UserTest < ActiveSupport::TestCase
     assert @volunteer.invalid?
   end
 
+  test "should be invalid when last name is not provided" do
+    @volunteer.last_name = nil
+    assert @volunteer.invalid?
+  end
+
   test "should create password_salt before save" do
     user = User.new(:email => "joel@brewerdigital.com", :password => "helloworld")
     user.save

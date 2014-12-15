@@ -20,14 +20,13 @@
     .email
       = f.label :email
       = f.text_field :email
-  %section.container
-    = f.label "Interests"
-    .focuses.clear
-      = hidden_field_tag "volunteer[focus_ids][]", nil
-      - Focus.all.each do |focus|
-        .focus
-          = check_box_tag "volunteer[focus_ids][]", focus.id, @user.focus_ids.include?(focus.id), id: dom_id(focus)
-          = label_tag dom_id(focus), focus.name
+  .row
+    .languages-container#languages
+      = f.label "Langauges"
+      = collection_select(:volunteer, :language_ids, Language.all, :id, :name, {}, { :multiple => true })
+    .focuses-container#focuses
+      = f.label "Interests"
+      = collection_select(:volunteer, :focus_ids, Focus.all, :id, :name, {}, { :multiple => true })
   .professions
     = f.label "Profession"
     = collection_select(:volunteer, :profession_id, Profession.all, :id, :name)

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :password
 
   has_many :projects
+  has_and_belongs_to_many :languages
   has_and_belongs_to_many :focuses, join_table: "focuses_users"
 
   def encrypt_password
