@@ -2,6 +2,10 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
 
+  def setup
+    @volunteer = users(:volunteer)
+  end
+
   test "should not save user when email is not provied" do
     user = User.new
     assert_not user.save
@@ -11,6 +15,17 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(:email => "joel@brewerdigital.com", :password => "")
     user.save
     assert_not user.save
+  end
+
+  test "should be valid when all attributes are provided" do
+    @volunteer.password = "helloworld"
+    #volunteer = User.new(type: "Volunteer", email: "joel@brewerdigital.com", password: "helloworld", city: "Nashville", first_name: "Joel", last_name: "Brewer")
+    assert @volunteer.valid?
+  end
+
+  test "should not be valid when first name is not provided" do
+    @volunteer.first_name = nil
+    assert @volunteer.invalid?
   end
    
 
