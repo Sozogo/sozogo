@@ -14,12 +14,12 @@
       = f.label :last_name
       = f.text_field :last_name
   .row
-    .city
-      = f.label :city
-      = f.text_field :city
     .email
       = f.label :email
       = f.text_field :email
+    .city
+      = f.label :city
+      = f.text_field :city
   .row
     .languages-container#languages
       = f.label "Langauges"
@@ -30,6 +30,11 @@
   .professions
     = f.label "Profession"
     = collection_select(:volunteer, :profession_id, Profession.all, :id, :name)
+  .birthday
+    = f.label "Birthday"
+    .month.inline= f.select(:birth_month, months_array)
+    .day.inline= f.select(:birth_day, days_array )
+    .year.inline= f.select(:birth_year, previous_hundred_years)
   .password.clear
     = f.label :password
     = f.password_field :password

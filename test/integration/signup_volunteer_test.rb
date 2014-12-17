@@ -11,10 +11,13 @@ class SignupVolunteerTest < ActionDispatch::IntegrationTest
 
     # fill out volunteer form
     volunteer = users(:volunteer)
+    volunteer.birth_month = 'April'
+
     fill_in('First name', :with => volunteer.first_name)
     fill_in('Last name', :with => volunteer.last_name)
     fill_in('City', :with => volunteer.city)
     fill_in('Email', :with => volunteer.email)
+    fill_in('Month', :with => volunteer.birth_month)
     select(focuses(:community).name)
     select(professions(:agriculture).name)
     fill_in('Password', :with => 'helloworld')

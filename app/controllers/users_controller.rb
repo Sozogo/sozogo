@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def create
     user = get_model(params[:type])
     @user = user.new(model_params)
+    @user.set_birthday(params)
 
     if @user.save
       flash[:notice] = "Welcome to sozogo!"
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def model_params
-    params.require(params[:type].to_sym.downcase).permit(:email, :password, :password_confirmation, :organization_name, :organization_type, :address, :first_name, :organization_contact_name, :phone_number, :last_name, :city, :type, :statement_of_beliefs, :denomination, :pastor, :service_times, :congregation_size, :church_statement, { :focus_ids => [] }, { :language_ids => [] } )
+    params.require(params[:type].to_sym.downcase).permit(:email, :password, :password_confirmation, :organization_name, :organization_type, :address, :first_name, :organization_contact_name, :phone_number, :last_name, :city, :type, :statement_of_beliefs, :denomination, :pastor, :service_times, :congregation_size, :church_statement, :birth_year, :birth_month, :birth_day, { :focus_ids => [] }, { :language_ids => [] } )
   end
 
   def volunteer?

@@ -11,6 +11,10 @@ module ApplicationHelper
     ((Time.now.year)..Time.now.year + n).to_a
   end
 
+  def previous_hundred_years
+    ((Time.now.year - 100)..Time.now.year).to_a.reverse
+  end
+
   def user_signup_message
     type = params["type"].downcase
     translation = "create_" + type

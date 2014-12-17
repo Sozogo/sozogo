@@ -5,8 +5,6 @@
   $gradient-angle: 10deg;
   $hero-image: 'building_home.jpg';
 
-  //@include background(image-url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
