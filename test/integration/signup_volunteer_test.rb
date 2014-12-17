@@ -15,7 +15,7 @@ class SignupVolunteerTest < ActionDispatch::IntegrationTest
     fill_in('Last name', :with => volunteer.last_name)
     fill_in('City', :with => volunteer.city)
     fill_in('Email', :with => volunteer.email)
-    check(focuses(:community).name)
+    select(focuses(:community).name)
     select(professions(:agriculture).name)
     fill_in('Password', :with => 'helloworld')
     fill_in('Password confirmation', :with => 'helloworld')
