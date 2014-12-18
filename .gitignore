@@ -14,6 +14,15 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
-.vagrant
 .DS_Store
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore ngrok
+/ngrok
+
+public/**
+
+# Ignore vagrant
+/.vagrant

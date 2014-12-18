@@ -1,7 +1,7 @@
 class UsersControllerTest < ActionController::TestCase
   test "should create volunteer" do
     assert_difference('Volunteer.count') do
-      post :create, "volunteer" => { :email => "joel@brewerdigital", :password => "helloworld", :type => "Volunteer", :city => "Nashville", :first_name => "Joel", :last_name => "Brewer" }, "type" => "Volunteer"
+      post :create, "volunteer" => { :email => "joel@brewerdigital", :password => "helloworld", :type => "Volunteer", :city => "Nashville", :first_name => "Joel", :last_name => "Brewer", :birth_month => "04", :birth_day => "16", :birth_year => "1991" }, "type" => "Volunteer"
     end
     assert_redirected_to "/"
   end

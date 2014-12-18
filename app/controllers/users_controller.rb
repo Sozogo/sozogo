@@ -12,7 +12,9 @@ class UsersController < ApplicationController
   def create
     user = get_model(params[:type])
     @user = user.new(model_params)
-    @user.set_birthday(params)
+    if volunteer?
+      @user.set_birthday(params)
+    end
 
     if @user.save
       flash[:notice] = "Welcome to sozogo!"
