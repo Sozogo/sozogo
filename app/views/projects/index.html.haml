@@ -1,5 +1,5 @@
-- if @projects.any?
-  - @projects.each do |project|
-    .project[project]
-      = link_to project.title, project_path(project)
-
+.projects-container
+  - if @projects.any?
+    - @projects.each do |project|
+      .project
+        = link_to project.title, project_path(project)

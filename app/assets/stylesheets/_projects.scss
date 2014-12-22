@@ -1,10 +1,14 @@
+.projects-container {
+  @include outer-container;
+}
+
 .project { 
   @include span-columns(3);
   @include omega(4n);
   height: 200px;
   background-color: $light-gray;
   border-radius: 10px;
-  //border: 1px solid $border-color;
+  border: 1px solid $border-color;
   margin-top: 10px;
   a {
     padding: 10px;
