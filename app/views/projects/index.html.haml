@@ -2,4 +2,6 @@
   - if @projects.any?
     - @projects.each do |project|
       .project
-        = link_to project.title, project_path(project)
+        .project-title= link_to project.title, project_path(project)
+        .project-organization-name= project.user.organization_name
+        .project-description= truncate(project.description, length: 100)

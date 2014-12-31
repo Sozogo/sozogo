@@ -10,9 +10,12 @@
   border-radius: 10px;
   border: 1px solid $border-color;
   margin-top: 10px;
+  padding: 10px;
   a {
-    padding: 10px;
     color: $dark-gray;
+  }
+  .project-title {
+    font-weight: 600;
   }
 }
 
