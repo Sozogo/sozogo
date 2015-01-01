@@ -17,7 +17,9 @@ class UsersController < ApplicationController
     end
 
     if @user.save
+      @user = User.authenticate(@user.email, @user.password)
       flash[:notice] = "Welcome to sozogo!"
+      session[:user_id] = @user.id
       redirect_to "/"
     else
       flash[:alert] = "There was a problem creating your account. Please try again."
@@ -37,14 +39,10 @@ class UsersController < ApplicationController
   end
 
   def volunteer?
-    if params["type"] == "Volunteer"
-      return true
-    end
+    params["type"] == "Volunteer"
   end
 
   def organization?
-    if params["type"] == "Organization"
-      return true
-    end
+    params["type"] == "Organization"
   end
 end
