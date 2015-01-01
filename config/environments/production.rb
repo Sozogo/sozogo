@@ -20,7 +20,7 @@ Rails.application.configure do
   # config.action_dispatch.rack_cache = true
 
   config.serve_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
