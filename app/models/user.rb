@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   validates_confirmation_of :password
   validates_presence_of :email, :password
+  validates_uniqueness_of :email
 
   has_many :projects
   has_and_belongs_to_many :languages

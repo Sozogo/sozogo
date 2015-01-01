@@ -18,9 +18,11 @@ class UsersController < ApplicationController
 
     if @user.save
       @user = User.authenticate(@user.email, @user.password)
-      flash[:notice] = "Welcome to sozogo!"
-      session[:user_id] = @user.id
-      redirect_to "/"
+      if @user
+        flash[:notice] = "Welcome to sozogo!"
+        session[:user_id] = @user.id
+      end
+        redirect_to "/"
     else
       flash[:alert] = "There was a problem creating your account. Please try again."
       @type = params[:type]

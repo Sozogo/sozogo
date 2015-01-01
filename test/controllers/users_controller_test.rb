@@ -19,7 +19,7 @@ class UsersControllerTest < ActionController::TestCase
   test "should create organization" do
     organization = users(:cbc)
     assert_difference('User.count') do
-      post :create, organization: { email: organization.email, password: "helloworld", organization_type: organization.organization_type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address, statement_of_beliefs: 1 }, "type" => "Organization"
+      post :create, organization: { email: "test@brewerdigital.com", password: "helloworld", organization_type: organization.organization_type, organization_name: organization.organization_name, organization_contact_name: organization.organization_contact_name, address: organization.address, statement_of_beliefs: 1 }, "type" => "Organization"
     end
   end
 

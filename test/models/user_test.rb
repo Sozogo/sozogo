@@ -11,6 +11,11 @@ class UserTest < ActiveSupport::TestCase
     assert @volunteer.valid?
   end
 
+  test "should be invalid when email is not unique" do
+    user2 = User.create(:email => @volunteer.email, :password => @volunteer.email)
+    assert user2.invalid?
+  end
+
   test "should be invalid when email is not provied" do
     @volunteer.email = nil
     assert @volunteer.invalid?
