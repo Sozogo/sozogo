@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:email], params[:password])
-    if @user
+    user = User.find_by(email: params[:email])
+    if user && User.authenticate(params[:email], params[:password])
       flash[:notice] = "You've been logged in."
-      session[:user_id] = @user.id
+      log_in(user)
       redirect_to "/"
     else
       flash[:alert] = "There was a problem logging you in."

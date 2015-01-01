@@ -11,10 +11,10 @@
       %li.nav-link.logo
         %a.logo{:href => "/"}
           %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
-      - if @current_user
+      - if logged_in?
         %li.nav-link
           = link_to "Log Out", destroy_session_path
-        - if @user && @user.organization?
+        - if current_user.organization?
           %li.nav-link
             = link_to "Add Project", new_project_path
       - else

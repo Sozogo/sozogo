@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   def months_array
     ('01'..'12').to_a
   end
