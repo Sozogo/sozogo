@@ -18,7 +18,7 @@ class SignupOrganizationTest < ActionDispatch::IntegrationTest
     fill_in('Address', :with => organization.address)
     fill_in('City', :with => organization.city)
     fill_in('Email', :with => "test@organization.com")
-    check(focuses(:community).name)
+    select(focuses(:community).name)
     fill_in('Password', :with => 'helloworld')
     fill_in('Password confirmation', :with => 'helloworld')
     find(:css, "#organization_statement_of_beliefs").set(true)

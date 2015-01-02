@@ -4,19 +4,24 @@
   .organization-name
     = f.label :organization_name
     = f.text_field :organization_name
-  .phone-number
-    = f.label :phone_number
-    = f.text_field :phone_number
-  .organization-contact-name
-    = f.label :organization_contact_name
-    = f.text_field :organization_contact_name
+  .row
+    .phone-number
+      = f.label :phone_number
+      = f.text_field :phone_number
+    .organization-contact-name
+      = f.label :organization_contact_name
+      = f.text_field :organization_contact_name
   .organization-statement
     = f.label "Short description of organization"
     = f.text_area :organization_statement
-  .organization-type
-    = f.label :organization_type
-    = f.collection_select(:organization_type, Constants::ORGANIZATION_TYPES, :to_s, :titleize, {:prompt => true})
-  .church-fields
+  .row
+    .organization-type
+      = f.label :organization_type
+      = f.collection_select(:organization_type, Constants::ORGANIZATION_TYPES, :to_s, :titleize, {:prompt => true})
+    .focuses-container#focuses
+      = f.label "Common Events"
+      = collection_select(:organization, :focus_ids, Focus.all, :id, :name, {}, { :multiple => true })
+  .church-fields.clear
     .denomination
       = f.label :denomination
       = f.text_field :denomination
@@ -29,26 +34,19 @@
     .congregation-size
       = f.label :congregation_size
       = f.text_field :congregation_size
-  .address
+  .address.clear
     = f.label :address
     = f.text_field :address
-  .city
-    = f.label :city
-    = f.text_field :city
-  .email
-    = f.label :email
-    = f.text_field :email
+  .row
+    .city
+      = f.label :city
+      = f.text_field :city
+    .email
+      = f.label :email
+      = f.text_field :email
   .website
     = f.label :website
     = f.text_field :website
-  %section.container
-    = f.label "Common Events"
-    .focuses.clear
-      = hidden_field_tag "organization[focus_ids][]", nil
-      - Focus.all.each do |focus|
-        .focus
-          = check_box_tag "organization[focus_ids][]", focus.id, @user.focus_ids.include?(focus.id), id: dom_id(focus)
-          = label_tag dom_id(focus), focus.name
   .statement-of-beliefs
     = f.label :statement_of_beliefs
     = "We believe in one God, the Father Almighty, creator of heaven and earth In one Lord Jesus Christ, the only begotten Son of God, who died on the cross, was buried, and rose again on the third day and in the Holy Spirit, the giver of life"
@@ -56,10 +54,11 @@
       = "Our organization affirms this statement of beliefs"
       = f.check_box :statement_of_beliefs
 
-  .password
-    = f.label :password
-    = f.password_field :password
-  .password_confirmation
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation
+  .row
+    .password
+      = f.label :password
+      = f.password_field :password
+    .password-confirmation
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
   = f.submit user_signup_message, :id => "new-user-submit"

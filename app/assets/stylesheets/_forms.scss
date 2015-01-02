@@ -38,7 +38,7 @@
 }
 
 .users-new {
-  .first-name, .last-name, .city, .email, .birthday {
+  .phone-number, .organization-contact-name, .first-name, .last-name, .city, .email, .birthday, .password, .password-confirmation, .focuses-container, .organization-type  {
     @include span-columns(6);
   }
 }
