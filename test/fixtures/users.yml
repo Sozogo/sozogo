@@ -10,6 +10,7 @@ cbc:
   organization_name: CBC Nashville
   organization_contact_name: Jared Rankin
   address: 111 Franklin Pike
+  city: Nashville
 
 volunteer:
   id: 2

@@ -8,7 +8,7 @@ namespace :db do
 
   desc 'Populates the database with sample data'
   task populate_sample_data: :environment do
-    10.times { User.create!( email: Faker::Internet.email, password: Faker::Internet.password, type: "Organization", organization_type: "Church", organization_name: Faker::Company.name, organization_contact_name: Faker::Name.name, address: Faker::Address.street_address) }
+    10.times { User.create!( email: Faker::Internet.email, password: Faker::Internet.password, type: "Organization", organization_type: "Church", organization_name: Faker::Company.name, organization_contact_name: Faker::Name.name, address: Faker::Address.street_address, city: Faker::Address.city) }
     10.times { 
       start_date = Faker::Date.forward.to_s.split("-")
       year = start_date[0].to_i

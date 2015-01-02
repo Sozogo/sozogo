@@ -1,6 +1,7 @@
 .project
   .project-title= link_to project.title, project_path(project)
-  .project-date= project.start_date.strftime("%b %d %Y")
-
+  .project-date-time
+    %span= project.start_date.strftime("%b %d %Y")
+    %span= "(" + project.display_duration + ")"
   .project-organization-name= project.user.organization_name
   .project-description= truncate(project.description, length: 100)

@@ -16,6 +16,7 @@ class SignupOrganizationTest < ActionDispatch::IntegrationTest
     fill_in('Phone number', :with => organization.phone_number)
     fill_in('Organization contact name', :with => organization.organization_contact_name)
     fill_in('Address', :with => organization.address)
+    fill_in('City', :with => organization.city)
     fill_in('Email', :with => "test@organization.com")
     check(focuses(:community).name)
     fill_in('Password', :with => 'helloworld')

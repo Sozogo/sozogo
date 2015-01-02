@@ -1,8 +1,11 @@
 .project-detail
   .project-title=  @project.title
+  .project-date-time
+    %span= @project.start_date.strftime("%b %d %Y")
+    %span= "(" + @project.display_duration + ")"
+  .project-address= @project.user.address
+  .project-city= @project.user.city
   .project-description= @project.description
   - if @project.number_of_volunteers_needed
     .project-volunteers-needed
       = "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
-  .project-start-date= "Start Date: " + @project.start_date.strftime("%b %d %Y")
-  .project-time= "Time: " + @project.display_duration
