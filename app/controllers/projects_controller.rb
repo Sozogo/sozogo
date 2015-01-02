@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order(:start_date)
   end
 
   def show
@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
 
     if @project.save
       flash[:notice] = "You successfully created a new project"
-      redirect_to "/"
+      redirect_to @project
     else
       flash[:alert] = "There was a problem creating your project. Please try again."
       render "new"

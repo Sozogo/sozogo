@@ -3,8 +3,8 @@
 }
 
 .project { 
-  @include span-columns(3);
-  @include omega(4n);
+  @include span-columns(4);
+  @include omega(3n);
   height: 200px;
   background-color: $light-gray;
   border-radius: 10px;
@@ -14,12 +14,21 @@
   a {
     color: $dark-gray;
   }
-  .project-title {
-    font-weight: 600;
-  }
-  .project-description {
-    margin-top: 10px;
-  }
+}
+
+.project-title {
+  font-weight: 600;
+}
+.project-description {
+  margin-top: 10px;
+}
+
+.project-detail {
+  background-color: $light-gray;
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 .block {

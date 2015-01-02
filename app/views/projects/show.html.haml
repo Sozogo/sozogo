@@ -1,7 +1,8 @@
-%ul
-  %li= "Title: " + @project.title
-  %li= "Description: " + @project.description
+.project-detail
+  .project-title=  @project.title
+  .project-description= @project.description
   - if @project.number_of_volunteers_needed
-    %li= "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
-  %li= "Start Date: " + @project.start_date.strftime("%b %d %Y")
-  %li= "Time: " + @project.display_duration
+    .project-volunteers-needed
+      = "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
+  .project-start-date= "Start Date: " + @project.start_date.strftime("%b %d %Y")
+  .project-time= "Time: " + @project.display_duration

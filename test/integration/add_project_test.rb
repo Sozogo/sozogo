@@ -27,6 +27,8 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     assert_difference 'Project.count', 1 do
       click_button('Create Project')
     end
+
+    assert_equal "/projects/#{Project.last.id}", current_path
     
     @project = Project.last
 

@@ -4,7 +4,7 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_difference('Project.count') do
       post :create, project: { :title => "Help widows in need", :description => "Come on out to Fenton and help widows in need. Pizza will be provided", :month => "01", :day => "01", :year => "2020" }
     end
-    assert_redirected_to "/"
+    assert_redirected_to "/projects/#{Project.last.id}"
   end
 
   test "should not create project if current user is a volunteer" do
