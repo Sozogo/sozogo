@@ -10,12 +10,12 @@ class SignupVolunteerTest < ActionDispatch::IntegrationTest
     assert_equal(I18n.t('create_volunteer'), find(:css, 'input#new-user-submit').value)
 
     # fill out volunteer form
-    volunteer = users(:volunteer)
-
-    fill_in('First name', :with => volunteer.first_name)
-    fill_in('Last name', :with => volunteer.last_name)
-    fill_in('City', :with => volunteer.city)
-    fill_in('Email', :with => "test@brewerdigital.com")
+    fill_in('First name', :with => "Joel")
+    fill_in('Last name', :with => "Brewer")
+    fill_in('City', :with => "Nashville")
+    fill_in('Email', :with => "jb@brewerdigital.com")
+    fill_in('Zipcode', :with => "37211")
+    select('Tennessee', :from => 'volunteer_state')
     select('01', :from => 'volunteer_birth_day')
     select('01', :from => 'volunteer_birth_month')
     select('1991', :from => 'volunteer_birth_year')

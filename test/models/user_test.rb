@@ -37,19 +37,19 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should create password_salt before save" do
-    user = User.new(:email => "joel@brewerdigital.com", :password => "helloworld")
+    user = User.new(:zipcode => "37211", :state => "TN", :city => "Nashville", :email => "joel@brewerdigital.com", :password => "helloworld")
     user.save
     assert_not_equal user.password_salt, nil, "Password salt is nil"
   end
 
   test "should create password_hash before save" do
-    user = User.new(:email => "joel@brewerdigitalcom", :password => "helloworld")
+    user = User.new(:zipcode => "37211", :state => "TN", :city => "Nashville",:email => "joel@brewerdigitalcom", :password => "helloworld")
     user.save
     assert_not_equal user.password_hash, nil, "Password hash is nil"
   end
 
   test "should return user when correct email and password are provided" do
-    user = User.new(:email => "joel@brewerdigital.com", :password => "helloworld")
+    user = User.new(:zipcode => "37211", :state => "TN", :city => "Nashville", :email => "joel@brewerdigital.com", :password => "helloworld")
     user.save
     assert_equal User.authenticate("joel@brewerdigital.com", "helloworld"), user
 
