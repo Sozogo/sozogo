@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       @user = User.authenticate(@user.email, @user.password)
       if @user
-        flash[:notice] = "Welcome to sozogo!"
+        flash[:notice] = "Welcome to SozoGo!"
         session[:user_id] = @user.id
       end
         redirect_to "/"

@@ -41,9 +41,15 @@
     .city
       = f.label :city
       = f.text_field :city
-    .email
-      = f.label :email
-      = f.text_field :email
+    .state
+      = f.label :state
+      = f.select(:state, us_states)
+  .zipcode
+    = f.label :zipcode
+    = f.text_field :zipcode
+  .email.clear
+    = f.label :email
+    = f.text_field :email
   .website
     = f.label :website
     = f.text_field :website

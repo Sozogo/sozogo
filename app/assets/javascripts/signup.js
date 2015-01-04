@@ -12,6 +12,7 @@ signup.organizationTypeHandler = function() {
 signup.selectHandler = function() {
   $("#volunteer_language_ids").select2();
   $("#volunteer_focus_ids").select2();
+  $("#organization_focus_ids").select2();
 }
 
 $(document).ready(function() {
