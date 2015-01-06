@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
+
 project_attributes = [
   "Youth involved",
   "Physically strenuous",
@@ -19,6 +20,8 @@ project_attributes = [
   "Free parking",
   "Virtual"
 ]
+
+ProjectAttribute.destroy_all
 
 project_attributes.each do |name|
   ProjectAttribute.create(name: name)
@@ -53,6 +56,7 @@ foci = [
   "Women"
 ]
 
+Focus.destroy_all
 foci.each do |name|
   Focus.create(name: name)
 end
@@ -76,6 +80,7 @@ professions = [
   "Transportation, distribution and logistics"
 ]
 
+Profession.destroy_all
 professions.each do |name|
   Profession.create(name: name)
 end
@@ -155,6 +160,7 @@ languages = [
   "Xhosa"
 ]
 
+Language.destroy_all
 languages.each do |language|
   Language.create(name: language)
 end

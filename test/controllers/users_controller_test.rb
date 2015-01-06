@@ -1,4 +1,9 @@
 class UsersControllerTest < ActionController::TestCase
+
+  # TODO:
+  # Clean up tests per this article:
+  # https://whatdoitest.com/getting-friendly-with-fixtures
+  
   test "should create volunteer" do
     assert_difference('Volunteer.count') do
       post :create, "volunteer" => { :email => "joel@brewerdigital", :password => "helloworld", :type => "Volunteer", :zipcode => "37211", :state => "Tennessee", :city => "Nashville", :first_name => "Joel", :last_name => "Brewer", :birth_month => "04", :birth_day => "16", :birth_year => "1991" }, "type" => "Volunteer"
