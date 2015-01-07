@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :end_time, :number_of_volunteers_needed, :recurring_rules_attribute, :focus_id, :volunteer_instructions,
+    params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :end_time, :number_of_volunteers_needed, :recurring_rules_attribute, :focus_id, :volunteer_instructions, :project_address, :city, :state, :zipcode,
     { :project_attribute_ids => [], :profession_ids => [] } )
   end
 end

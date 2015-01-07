@@ -3,7 +3,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :title
   validates :title, length: { maximum: 60 }
-  validates_presence_of :description
+  validates_presence_of :description, :title, :project_address
   validate :validate_created_at
   validate :validate_user_organization
   validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
