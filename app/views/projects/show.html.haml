@@ -14,7 +14,8 @@
     = @project.description
   - if @project.number_of_volunteers_needed
     .project-volunteers-needed
-      = "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
+      .title Volunteers Needed
+      = @project.number_of_volunteers_needed.to_s
   - if @project.project_attributes.any?
     .project-attributes
       .title Project Attributes
