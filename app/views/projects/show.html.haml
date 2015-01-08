@@ -1,12 +1,32 @@
 .project-detail
-  .project-title=  @project.title
+  %h1.project-title=  @project.title
   .project-date-time
+    .title Date
     %span= @project.start_date.strftime("%b %d %Y")
     %span= "(" + @project.display_duration + ")"
-  - if @project.project_address
+  - if @project.project_address.present?
+    .title Address
     .project-address= @project.project_address
-  .project-city= @project.user.city
-  .project-description= @project.description
+    %span= @project.city
+    %span= @project.state
+  .project-description
+    .title Description
+    = @project.description
   - if @project.number_of_volunteers_needed
     .project-volunteers-needed
       = "Number of Volunteers Needed: " + @project.number_of_volunteers_needed.to_s
+  - if @project.project_attributes.any?
+    .project-attributes
+      .title Project Attributes
+      - @project.project_attributes.each do |attribute|
+        .project-attribute.tag= attribute.name
+  - if @project.professions.any?
+    .project-professions
+      .title Associated Professions
+      - @project.professions.each do |profession|
+        .project-profession.tag= profession.name
+  - if @project.volunteer_instructions.present?
+    .volunteer-instructions
+      .title Volunteer Instrunctions
+      = @project.volunteer_instructions
+
