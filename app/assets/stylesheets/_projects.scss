@@ -1,5 +1,8 @@
 .projects-container {
   @include outer-container;
+  a {
+    color: inherit;
+  }
 }
 
 .project { 
@@ -11,8 +14,12 @@
   border: 1px solid $border-color;
   margin-top: 10px;
   padding: 10px;
+  position: relative;
   a {
     color: $dark-gray;
+  }
+  &:hover {
+    border: 1px solid $medium-gray;
   }
 }
 
@@ -31,4 +38,11 @@
 .block {
   @include span-columns(3);
   @include omega(4n);
+}
+
+.project-volunteer-meter {
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+  padding-right: 20px;
 }

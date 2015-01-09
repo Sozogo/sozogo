@@ -37,6 +37,10 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def percentage_fulfilled
+    10
+  end
+
   private
   def convert_created_at
     begin
