@@ -6,5 +6,6 @@
   .project-organization-name= project.user.organization_name
   .project-description= truncate(project.description, length: 100)
   .project-volunteer-meter
+    .title 10% fulfilled
     .progress-bar
       %span.meter{style: "width: #{project.percentage_fulfilled}%;"}

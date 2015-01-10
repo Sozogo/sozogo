@@ -33,6 +33,16 @@
   border: 1px solid $border-color;
   margin-top: 10px;
   padding: 10px;
+  position: relative;
+  .project-title {
+    width: 80%;
+  }
+  .sign-me-up {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+  }
 }
 
 .block {

@@ -1,5 +1,7 @@
 .project-detail
   %h1.project-title=  @project.title
+  - if logged_in?
+    abutton.sign-me-up Sign me up
   .project-date-time
     .title Date
     %span= @project.start_date.strftime("%b %d %Y")

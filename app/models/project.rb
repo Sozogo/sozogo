@@ -8,6 +8,7 @@ class Project < ActiveRecord::Base
   validate :validate_user_organization
   validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
   serialize :recurring_rules, IceCube::Schedule
+  has_many :signups
 
   has_and_belongs_to_many :project_attributes, join_table: "projects_project_attributes"
   has_and_belongs_to_many :professions

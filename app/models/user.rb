@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   has_many :projects
+  has_many :signups
   has_and_belongs_to_many :languages
   has_and_belongs_to_many :focuses, join_table: "focuses_users"
 
@@ -30,4 +31,21 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
+  def sign_up(project)
+    signups.create(project_id: project.id)
+  end
+
+  def cancel_sign_up(project)
+    signups.find_by(project_id: project.id).destroy
+  end
+
+  def signed_up?(project)
+    if signups.find_by(project_id: project.id)
+      true
+    else
+      false
+    end
+  end
+
 end
