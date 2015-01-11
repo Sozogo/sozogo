@@ -38,9 +38,18 @@ class Project < ActiveRecord::Base
     end
   end
 
-  def percentage_fulfilled
-    10
+  def volunteer_percentage_fulfilled
+    (signups.count.to_f / number_of_volunteers_needed.to_f * 100).round
   end
+
+  def volunteer_spots_remaining
+    number_of_volunteers_needed - volunteer_spots_fulfilled
+  end
+
+  def volunteer_spots_fulfilled
+    signups.count
+  end
+
 
   private
   def convert_created_at
