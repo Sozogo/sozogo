@@ -1,7 +1,7 @@
 - if logged_in?
-  .signup-form
-  - if current_user.signed_up?(@project)
-    = render 'cancel'
-  - else
-    = render 'signup'
+  #signup-form
+    - if current_user.signed_up?(@project)
+      = render 'cancel'
+    - else
+      = render 'signup'
     

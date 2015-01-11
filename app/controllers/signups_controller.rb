@@ -14,6 +14,16 @@ class SignupsController < ApplicationController
     end
   end
 
+  def destroy
+    @signup = Signup.find(params[:id])
+    @project = @signup.project
+    current_user.cancel_sign_up(@signup.project)
+    respond_to do |format|
+      format.html { redirect_to @signup.project }
+      format.js
+    end
+  end
+
   private
 
   def signup_params
