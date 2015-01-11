@@ -1,4 +1,4 @@
-- if logged_in?
+- if logged_in? && current_user.volunteer?
   #signup-form
     - if current_user.signed_up?(@project)
       = render 'cancel', :project => @project
