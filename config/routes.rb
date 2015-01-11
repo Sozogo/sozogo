@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :organizations, controller: 'users', type: 'Organization'
   resources :volunteers, controller: 'users', type: 'Volunteer'
   resources :projects
+  resources :signups
 
   get "/" => 'home#index'
   get "/new-session" => "sessions#new"

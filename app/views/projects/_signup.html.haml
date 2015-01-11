@@ -1,0 +1,4 @@
+= form_for(@signup, remote: true) do |f|
+  = f.hidden_field :project_id, :value => @project.id
+  = f.hidden_field :user_id, :value => current_user.id
+  = f.submit "Sign me up!", class: "button sign-me-up"
