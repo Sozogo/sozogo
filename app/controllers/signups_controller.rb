@@ -1,6 +1,7 @@
 class SignupsController < ApplicationController
   def create
     @signup = Signup.new(signup_params)
+    @project = @signup.project
 
     respond_to do |format|
       if @signup.save

@@ -1,4 +1,4 @@
-= form_for(current_user.signups.find_by(project_id: @signup.project.id),
+= form_for(current_user.signups.find_by(project_id: project.id),
   html: {method: :delete },
   remote: true) do |f|
   = f.submit "Cancel", class: "button sign-me-up"

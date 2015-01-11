@@ -1,1 +1,1 @@
-$("#signup-form").html("<%= escape_javascript(render('projects/signup')) %>")
+$("#signup-form").html("<%= escape_javascript(render('projects/signup', :project => @project)) %>")

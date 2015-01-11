@@ -1,7 +1,7 @@
 - if logged_in?
   #signup-form
     - if current_user.signed_up?(@project)
-      = render 'cancel'
+      = render 'cancel', :project => @project
     - else
-      = render 'signup'
+      = render 'signup', :project => @project
     
