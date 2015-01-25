@@ -5,7 +5,8 @@
     %span= "(" + project.display_duration + ")"
   .project-organization-name= project.user.organization_name
   .project-description= truncate(project.description, length: 100)
-  .project-volunteer-meter
-    .title #{project.volunteer_percentage_fulfilled}% fulfilled
-    .progress-bar
-      %span.meter{style: "width: #{project.volunteer_percentage_fulfilled}%;"}
+  - if project.number_of_volunteers_needed
+    .project-volunteer-meter
+      .title #{project.volunteer_percentage_fulfilled}% fulfilled
+      .progress-bar
+        %span.meter{style: "width: #{project.volunteer_percentage_fulfilled}%;"}
