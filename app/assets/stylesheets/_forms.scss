@@ -5,6 +5,18 @@
   }
 }
 
+.search-container {
+  width: 300px;
+  margin: 0 auto;
+  input[type="text"] {
+    @include span-columns(6);
+  }
+  input[type="submit"] {
+    @include span-columns(6);
+  }
+}
+  
+
 .time {
   .start-time {
     float: left;
