@@ -1,4 +1,5 @@
 section.main-container {
+  margin-top: 10px;
   @include outer-container;
 }
 
@@ -150,4 +151,9 @@ section.form {
   100% {
     background-position: 40px 0px;
   }
+}
+
+.lower-border {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $base-border-color;
 }
