@@ -1,6 +1,10 @@
 widows:
   title: Help Widows in Need
   description: Come to East Saint Louis and help widows in need
+  address: 4750 Haverwood Lane APT 6209
+  zipcode: 75287
+  city: Dallas
+  state: TX
   number_of_volunteers_needed: 10
   start_date: 2020-10-10
   start_time: <%= Time.now + 1.day %>

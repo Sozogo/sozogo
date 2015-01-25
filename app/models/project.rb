@@ -1,10 +1,8 @@
 class Project < ActiveRecord::Base
   attr_accessor :month, :day, :year, :recurring_rules_attribute
 
-  validates_presence_of :title
   validates :title, length: { maximum: 60 }
-  validates_presence_of :description, :title, :project_address
-  validate :validate_created_at
+  validates_presence_of :description, :title, :address, :zipcode, :city, :state
   validate :validate_user_organization
   validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
   serialize :recurring_rules, IceCube::Schedule
@@ -14,6 +12,13 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :professions
   belongs_to :focus
   belongs_to :user
+
+  geocoded_by :full_address
+  after_validation :geocode
+
+  def full_address
+    [address, city, state, zipcode].compact.join(', ')
+  end
 
   def save_start_date(params)
     self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
@@ -59,11 +64,6 @@ class Project < ActiveRecord::Base
     rescue ArgumentError
       false
     end
-  end
-
-
-  def validate_created_at
-    errors.add("Created at date", "is invalid.") unless convert_created_at
   end
 
   def validate_user_organization

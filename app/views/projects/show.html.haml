@@ -5,9 +5,9 @@
     .title Date
     %span= @project.start_date.strftime("%b %d %Y")
     %span= "(" + @project.display_duration + ")"
-  - if @project.project_address.present?
+  - if @project.address.present?
     .title Address
-    .project-address= @project.project_address
+    .project-address= @project.address
     %span= @project.city
     %span= @project.state
   .project-description

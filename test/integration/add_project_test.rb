@@ -23,7 +23,7 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     select('Community', :from => 'project_focus_id')
     check(professions(:agriculture).name)
     fill_in('Volunteer instructions', :with => 'Park across the street. Meet in the atrium.')
-    fill_in('Project address', :with => '814 Northoak Drive')
+    fill_in('Address', :with => '814 Northoak Drive')
     fill_in('City', :with => 'Nashville')
     select('Tennessee', :from => 'project_state')
     fill_in('Zipcode', :with => '37211')

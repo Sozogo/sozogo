@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150110052007) do
+ActiveRecord::Schema.define(version: 20150125221414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,10 +68,12 @@ ActiveRecord::Schema.define(version: 20150110052007) do
     t.integer  "focus_id"
     t.text     "volunteer_instructions"
     t.integer  "user_id"
-    t.string   "project_address"
+    t.string   "address"
     t.string   "city"
     t.string   "state"
     t.string   "zipcode"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "projects_project_attributes", id: false, force: true do |t|

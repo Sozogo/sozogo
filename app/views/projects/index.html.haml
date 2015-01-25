@@ -1,3 +1,7 @@
+.search-container
+  = form_tag(projects_path, :method => "get", id: "zipcode-search") do
+    = text_field_tag :zipcode, params[:zipcode], placeholder: "Enter zipcode"
+    = submit_tag "Browse", :name => nil
 .projects-container
   - if @projects.any?
     = render @projects
