@@ -1,7 +1,7 @@
 %header.centered-navigation
   .centered-navigation-wrapper
     %a.mobile-logo{:href => "javascript:void(0)"}
-      %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
+      = image_tag("sozogo_trans.png")
     %a.centered-navigation-menu-button{:href => ""} MENU
     %ul.centered-navigation-menu
       %li.nav-link
@@ -10,7 +10,7 @@
         = link_to "About", about_path
       %li.nav-link.logo
         %a.logo{:href => "/"}
-          %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"}/
+          = image_tag("sozogo_trans.png")
       - if logged_in?
         %li.nav-link
           = link_to "Log Out", destroy_session_path
