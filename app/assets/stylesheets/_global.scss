@@ -7,6 +7,12 @@ section.container {
   @include outer-container;
 }
 
+address {
+  span {
+    display: block;
+  }
+}
+
 section.form {
   @include span-columns(8);
   @include shift(2);

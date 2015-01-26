@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get "/destroy-session" => "sessions#destroy"
   get "/about" => "home#about"
   get "/signup" => "home#signup"
+  get "/donate" => "home#donate"
 end

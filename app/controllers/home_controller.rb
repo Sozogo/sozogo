@@ -8,4 +8,7 @@ class HomeController < ApplicationController
 
   def signup
   end
+
+  def donate
+  end
 end
