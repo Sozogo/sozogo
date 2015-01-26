@@ -1,3 +1,4 @@
+%h1 Find a project. Get involved.
 .search-container
   = form_tag(projects_path, :method => "get", id: "zipcode-search") do
     = text_field_tag :zipcode, params[:zipcode], placeholder: "Enter zipcode"

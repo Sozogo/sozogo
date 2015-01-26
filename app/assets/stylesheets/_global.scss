@@ -1,6 +1,10 @@
 section.main-container {
   margin-top: 10px;
   @include outer-container;
+  h1 {
+    text-align: center;
+    margin: 40px;
+  }
 }
 
 section.container {
@@ -162,4 +166,8 @@ section.form {
 .lower-border {
   padding-bottom: 10px;
   border-bottom: 1px solid $base-border-color;
+}
+
+.center {
+  text-align: center;
 }

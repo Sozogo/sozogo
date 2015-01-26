@@ -1,9 +1,12 @@
-%form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
-  %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
-  %input{:name => "hosted_button_id", :type => "hidden", :value => "TH9FRV7ZM6SHE"}
-  %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}
-  %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}
-%p Donations are tax-deductible.
+%h1 Support our Mission.
+.donate-box.center
+  %p Donations are tax-deductible and processed securely by PayPal.
+  .donate-form
+    %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+      %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
+      %input{:name => "hosted_button_id", :type => "hidden", :value => "TH9FRV7ZM6SHE"}
+      %input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}
+    %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/en_US/i/scr/pixel.gif", :width => "1"}
 %p If you do not wish to donate online, cash and checks can be sent to:
 %address
   %span SozoGo
