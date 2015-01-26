@@ -170,10 +170,12 @@
    h1 {
       color: white;
       font-size: 1.3em;
-      margin-bottom: .4em;
+      margin: 0 0 .4em 0 !important;
+      text-align: left !important;
     }
 
    p {
+     margin-bottom: 20px;
       color: transparentize(white, .3);
     }
 }
