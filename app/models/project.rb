@@ -1,6 +1,8 @@
 class Project < ActiveRecord::Base
   attr_accessor :month, :day, :year, :recurring_rules_attribute
 
+  scope :future, -> { where("start_date > ?", Time.zone.now).order(:start_date) }
+
   validates :title, length: { maximum: 60 }
   validates_presence_of :description, :title, :address, :zipcode, :city, :state
   validate :validate_user_organization
