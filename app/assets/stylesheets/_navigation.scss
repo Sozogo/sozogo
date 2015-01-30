@@ -28,7 +28,7 @@
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
+      opacity: 1;
       padding: .8em 0;
     }
 
@@ -132,7 +132,7 @@
   .logo img {
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
-    opacity: .6;
+    opacity: 1;
   }
 
   // Sub menus
