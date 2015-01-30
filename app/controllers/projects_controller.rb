@@ -10,9 +10,11 @@ class ProjectsController < ApplicationController
   def index
     default_radius = "10"
     if params[:zipcode].present?
-      @projects = Project.future.near(params[:zipcode], default_radius)
+      #@projects = Project.future.near(params[:zipcode], default_radius)
+      @projects = Project.near(params[:zipcode], default_radius)
     else
-      @projects = Project.future
+      #@projects = Project.future
+      @projects = Project.all
     end
   end
 

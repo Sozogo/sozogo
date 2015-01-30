@@ -33,6 +33,15 @@ class ProjectTest < ActiveSupport::TestCase
     assert_not @project.save
   end
 
+  test "#future should not return projects in the past" do
+    p = Project.first
+    a_long_time_ago = p.start_date - 50.years
+    p.update_attribute('start_date', a_long_time_ago)
+
+    future_projects = Project.future
+    assert_equal false, future_projects.include?(p)
+  end
+
   test "#near should return nearby projects" do
     p = Project.first
     p.geocode
