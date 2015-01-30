@@ -6,6 +6,7 @@ gem 'bitters'
 
 gem 'rails', '4.1.4'
 gem 'pg'
+gem 'puma'
 gem 'geocoder'
 gem 'recurring_select'
 gem 'sass-rails', '~> 5.0.0.beta1'
