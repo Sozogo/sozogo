@@ -29,7 +29,7 @@
     = f.text_field :email
   .row
     .languages-container#languages
-      = f.label "Langauges"
+      = f.label "Languages"
       = collection_select(:volunteer, :language_ids, Language.all, :id, :name, {}, { :multiple => true })
     .focuses-container#focuses
       = f.label "Interests"
