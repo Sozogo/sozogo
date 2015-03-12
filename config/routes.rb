@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get "/about" => "home#about"
   get "/signup" => "home#signup"
   get "/donate" => "home#donate"
+
+  get '/status', to: 'server#status'
 end
