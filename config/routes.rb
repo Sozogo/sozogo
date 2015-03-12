@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   post "/create-session" => "sessions#create"
   get "/destroy-session" => "sessions#destroy"
   get "/about" => "home#about"
-  get "/signup" => "home#signup"
+  get "/signup" => "home#signup", as: "signup_user"
   get "/donate" => "home#donate"
-
   get '/status', to: 'server#status'
 end
