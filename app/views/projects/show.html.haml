@@ -1,6 +1,9 @@
 .project-detail
   %h1.project-title= @project.title
   = render "signup_form"
+  .project-organization
+    .title Organization
+    %span= @project.user.organization_name
   .project-date-time
     .title Date
     %span= @project.start_date.strftime("%b %d %Y")

@@ -18,6 +18,10 @@ class Project < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode
 
+  def city_and_state
+    [city, state].compact.join(', ')
+  end
+
   def full_address
     [address, city, state, zipcode].compact.join(', ')
   end

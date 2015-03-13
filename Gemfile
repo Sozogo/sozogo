@@ -12,6 +12,7 @@ gem 'recurring_select'
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'font-awesome-rails'
 gem 'haml-rails'
 gem 'newrelic_rpm'
 gem 'bcrypt'
@@ -32,12 +33,3 @@ group :development do
 end
 
 gem "pry", group: [:development, :test]
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-

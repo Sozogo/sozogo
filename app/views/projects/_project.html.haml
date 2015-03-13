@@ -1,8 +1,14 @@
 = link_to project_path(project), class: "project" do
   .project-title.title= project.title
   .project-date-time
-    %span= project.start_date.strftime("%b %d %Y")
-    %span= "(" + project.display_duration + ")"
+    %i.fa.fa-calendar
+    = project.start_date.strftime("%b %d %Y")
+  .project-duration
+    %i.fa.fa-clock-o
+    = project.display_duration
+  .project-city-state
+    %i.fa.fa-map-marker
+    = project.city_and_state
   .project-organization-name= project.user.organization_name
   .project-description= truncate(project.description, length: 100)
   - if project.number_of_volunteers_needed
