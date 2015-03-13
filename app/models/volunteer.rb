@@ -6,4 +6,8 @@ class Volunteer < User
     birthday = Date.parse("#{params["volunteer"]["birth_year"]}-#{params["volunteer"]["birth_month"]}-#{params["volunteer"]["birth_day"]}")
     self.birthday = birthday
   end
+
+  def full_name
+    first_name.capitalize + " " + last_name.capitalize
+  end
 end

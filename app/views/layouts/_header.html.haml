@@ -4,20 +4,32 @@
       = image_tag("sozogo_trans.png")
     %a.centered-navigation-menu-button{:href => ""} MENU
     %ul.centered-navigation-menu
-      %li.nav-link
-        = link_to "Projects", projects_path
-      %li.nav-link
-        = link_to "About", about_path
-      %li.nav-link.logo
-        %a.logo{:href => "/"}
-          = image_tag("sozogo_trans.png")
       - if logged_in?
-        %li.nav-link
-          = link_to "Log Out", destroy_session_path
         - if current_user.organization?
           %li.nav-link
+            = link_to "Your Projects", users_projects_path(current_user)
+          %li.nav-link
             = link_to "Add Project", new_project_path
+        - else
+          %li.nav-link
+            = link_to "Browse Projects", projects_path
+        %li.nav-link
+          = link_to "About", about_path
+        %li.nav-link.logo
+          %a.logo{:href => "/"}
+            = image_tag("sozogo_trans.png")
+        %li.nav-link
+          = link_to "Donate", donate_path
+        %li.nav-link
+          = link_to "Log Out", destroy_session_path
       - else
+        %li.nav-link
+          = link_to "Browse Projects", projects_path
+        %li.nav-link
+          = link_to "About", about_path
+        %li.nav-link.logo
+          %a.logo{:href => "/"}
+            = image_tag("sozogo_trans.png")
         %li.nav-link
           = link_to "Donate", donate_path
         %li.nav-link

@@ -1,0 +1,4 @@
+%h1 #{current_user.organization_name}'s upcoming projects.
+.projects-container
+  - if @projects.any?
+    = render partial: "projects/project", collection:  @projects

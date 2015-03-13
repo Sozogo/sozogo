@@ -1,4 +1,4 @@
-%h1 Sign Up
+%h1 Volunteer Sign Up
 = form_for @user, :url => { :action => :create, :type => @type } do |f|
   - if @user.errors.any?
     .error-explanation
@@ -6,48 +6,44 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
-  .row
-    .first-name
-      = f.label :first_name
-      = f.text_field :first_name
-    .last-name
-      = f.label :last_name
-      = f.text_field :last_name
+  .first-name
+    = f.text_field :first_name, placeholder: "What is your first name?"
+
+  .last-name
+    = f.text_field :last_name, placeholder: "What is your last name?"
   .row
     .city
-      = f.label :city
-      = f.text_field :city
+      = f.text_field :city, placeholder: "What city do you live in?"
     .state
-      = f.label :state
       = f.select(:state, us_states)
   .zipcode
-    = f.label :zipcode
-    = f.text_field :zipcode
+    = f.text_field :zipcode, placeholder: "What is your zipcode?"
     
   .email.clear
-    = f.label :email
-    = f.text_field :email
-  .row
-    .languages-container#languages
-      = f.label "Languages"
-      = collection_select(:volunteer, :language_ids, Language.all, :id, :name, {}, { :multiple => true })
-    .focuses-container#focuses
-      = f.label "Interests"
-      = collection_select(:volunteer, :focus_ids, Focus.all, :id, :name, {}, { :multiple => true })
+    = f.text_field :email, placeholder: "What is your email address?"
+
+  .languages-container#languages
+    = collection_select(:volunteer, :language_ids, Language.all, :id, :name, {}, { :multiple => true })
+  .focuses-container#focuses
+    = collection_select(:volunteer, :focus_ids, Focus.all, :id, :name, {}, { :multiple => true })
+
+  .shirt-size
+    = f.text_field :shirt_size, placeholder: "What is your t-shirt size?"
+
   .professions.clear
-    = f.label "Profession"
-    = collection_select(:volunteer, :profession_id, Profession.all, :id, :name)
+    = f.label "What is your profession?"
+    = collection_select(:volunteer, :profession_id, Profession.all, :id, :name, {})
   .birthday
-    = f.label "Birthday"
+    = f.label "When is your birthday?"
     .month.inline= f.select(:birth_month, months_array)
     .day.inline= f.select(:birth_day, days_array )
     .year.inline= f.select(:birth_year, previous_hundred_years)
+  .denomination
+    = f.text_field :denomination, placeholder: "What is your denomination?"
   .row
     .password
-      = f.label :password
-      = f.password_field :password
+      = f.password_field :password, placeholder: "Password"
     .password-confirmation
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation
+      = f.password_field :password_confirmation, placeholder: "Password confirmation"
   .signup.clear
     = f.submit user_signup_message, :id => "new-user-submit", :class => "clear"

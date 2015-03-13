@@ -16,15 +16,18 @@
   .project-description
     .title Description
     = @project.description
+
   - if @project.number_of_volunteers_needed
     .project-volunteers-needed
-      .title Volunteers Needed
-      = @project.number_of_volunteers_needed.to_s
-  - if @project.project_attributes.any?
+      .title Remaining volunteers needed
+      = @project.volunteer_spots_remaining
+
+  - if @project.project_attributes.present?
     .project-attributes
       .title Project Attributes
       - @project.project_attributes.each do |attribute|
         .project-attribute.tag= attribute.name
+
   - if @project.professions.any?
     .project-professions
       .title Associated Professions
@@ -34,4 +37,4 @@
     .volunteer-instructions
       .title Volunteer Instrunctions
       = @project.volunteer_instructions
-
+  = render "volunteer_table"

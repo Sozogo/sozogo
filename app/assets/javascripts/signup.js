@@ -10,9 +10,15 @@ signup.organizationTypeHandler = function() {
 }
 
 signup.selectHandler = function() {
-  $("#volunteer_language_ids").select2();
-  $("#volunteer_focus_ids").select2();
-  $("#organization_focus_ids").select2();
+  $("#volunteer_language_ids").select2({
+    placeholder: "What languages do you speak?"
+  });
+  $("#volunteer_focus_ids").select2({
+    placeholder: "What are your interests?"
+  });
+  $("#organization_focus_ids").select2({
+    placeholder: "What are your common events?"
+  });
 }
 
 $(document).ready(function() {

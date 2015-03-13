@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :password, :zipcode, :city, :state
   validates_uniqueness_of :email
 
+  belongs_to :profession
   has_many :projects
   has_many :signups
   has_and_belongs_to_many :languages
@@ -22,6 +23,17 @@ class User < ActiveRecord::Base
   def volunteer?
     self.type == "Volunteer"
   end
+
+  def age
+    today = Date.today
+    a = today.year - birthday.year
+    a = a -1 if (
+      birthday.month > today.month or
+      (birthday.month >= today.month and birthday.day > today.day)
+    )
+    a
+  end
+
 
   def self.authenticate(email, password)
     user = User.where(email: email).first
