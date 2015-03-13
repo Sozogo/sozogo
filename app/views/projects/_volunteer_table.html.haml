@@ -14,7 +14,7 @@
         %tr
           %td= signup.user.full_name
           %td= signup.user.email
-          %td= signup.user.profession.name
-          %td
-          %td= signup.user.age
-          %td
+          %td= signup.user.profession.name if signup.user.profession
+          %td= signup.user.denomination
+          %td= signup.user.age if signup.user.birthday
+          %td= signup.user.shirt_size
