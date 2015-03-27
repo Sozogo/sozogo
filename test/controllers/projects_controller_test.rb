@@ -7,9 +7,6 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_redirected_to "/projects/#{Project.last.id}"
   end
 
-  test "should not create project if current user is a volunteer" do
-  end
-
   test "should get index" do
     get :index
     assert_response :success
@@ -26,6 +23,23 @@ class ProjectsControllerTest < ActionController::TestCase
   test "should not get new if not signed in" do
     get :new
     assert_response :redirect
+  end
+
+  test "should update project" do
+    project = projects(:widows)
+    session[:user_id] = projects(:widows).user.id
+    patch :update, { id: project.id, project: { title: "New project bro"} }
+    assert_redirected_to project_path(assigns(:project))
+    assert_equal "You successfully updated your project!", flash[:notice]
+  end
+
+  test "should not update project when attirbutes are dirty" do
+    project = projects(:widows)
+    session[:user_id] = projects(:widows).user.id
+    title = "a" * 61
+    patch :update, { id: project.id, project: { title: title } }
+    assert_redirected_to project_path(assigns(:project))
+    assert_equal "Hmm. Something went wrong. Your project was not updated.", flash[:notice]
   end
 
   test "should get new if signed in" do

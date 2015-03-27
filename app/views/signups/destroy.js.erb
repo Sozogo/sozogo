@@ -1,4 +1,4 @@
-$("#signup-form").html("<%= escape_javascript(render('projects/signup', :project => @project)) %>")
+$("#action-form").html("<%= escape_javascript(render('projects/signup', :project => @project)) %>")
 <% flash.each do |type, message| %>
   $(".flashes-container").html("<div class='flash flash-notice'><%= message.html_safe %></div>")
 <% end %>

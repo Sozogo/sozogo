@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :authorize, only: :new
+  before_filter :set_project, only: [:edit, :show, :update] 
   before_filter(only: [:new, :create]) { |c| c.organization_only "Sorry, you must be registered as an organization to create new projects" }
 
   def new
@@ -16,9 +17,27 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    if current_user.id == @project.user.id
+      render "edit"
+    else
+      redirect_to projects_url
+    end
+  end
+
   def show
-    @project = Project.find(params[:id])
     @signup = Signup.new
+  end
+
+  def update
+    if current_user.id == @project.user.id
+      if @project.update(project_params)
+        flash[:notice] = "You successfully updated your project!"
+      else
+        flash[:notice] = "Hmm. Something went wrong. Your project was not updated."
+      end
+    end
+    redirect_to @project
   end
 
   def create
@@ -39,6 +58,10 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def project_params
     params.require(:project).permit(:title, :description, :month, :day, :year, :start_time, :end_time, :number_of_volunteers_needed, :recurring_rules_attribute, :focus_id, :volunteer_instructions, :address, :city, :state, :zipcode,

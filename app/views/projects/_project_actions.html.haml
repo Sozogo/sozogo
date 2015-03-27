@@ -1,7 +1,10 @@
 - if logged_in? && current_user.volunteer?
-  #signup-form
+  #action-form
     - if current_user.signed_up?(@project)
       = render 'cancel', :project => @project
     - else
       = render 'signup', :project => @project
+- elsif logged_in? && ( current_user.id == @project.user.id )
+  #ation-form
+    = link_to "Edit", edit_project_path(@project), class: "button upper-right"
     

@@ -1,0 +1,58 @@
+= render "layouts/errors", resource: @project
+.title
+  = f.label :title
+  = f.text_field :title
+.date
+  = f.label "Start Date"
+  .month.inline= f.select(:month, months_array)
+  .day.inline= f.select(:day, days_array )
+  .year.inline= f.select(:year, next_n_years_array(5))
+.time
+  .start-time
+    = f.label "Start Time"
+    = f.time_select :start_time, { include_seconds: false, ampm: true }
+  .end-time
+    = f.label "End Time"
+    = f.time_select :end_time, { include_seconds: false, ampm: true }
+  .recurring
+    = f.label "Recurring?"
+    = f.select_recurring :recurring_rules_attribute
+.project-address.clear
+  = f.label :address
+  = f.text_area :address, rows: 5
+.project-city
+  = f.label :city
+  = f.text_field :city
+.project-state
+  = f.label :state
+  = f.select(:state, us_states)
+.project-zipcode
+  = f.label :zipcode
+  = f.text_field :zipcode
+.description
+  = f.label :description
+  = f.text_area :description, rows: 10
+%section.container
+  .professions
+    = f.label "Related Professions"
+    = hidden_field_tag "project[profession_ids][]", nil
+    - Profession.all.each do |profession|
+      .profession
+        = check_box_tag "project[profession_ids][]", profession.id, @project.profession_ids.include?(profession.id), id: dom_id(profession)
+        = label_tag dom_id(profession), profession.name
+  .attributes
+    = f.label "Project Attributes"
+    = hidden_field_tag "project[project_attribute_ids][]", nil
+    - ProjectAttribute.all.each do |project_attribute|
+      .attribute
+        = check_box_tag "project[project_attribute_ids][]", project_attribute.id, @project.project_attribute_ids.include?(project_attribute.id), id: dom_id(project_attribute)
+        = label_tag dom_id(project_attribute), project_attribute.name
+.volunteers-needed
+  = f.label :number_of_volunteers_needed
+  = f.text_field :number_of_volunteers_needed, class: "small-input"
+.focus
+  = f.label "Project Focus"
+  = collection_select(:project, :focus_id, Focus.all, :id, :name)
+.volunter-instructions.clear
+  = f.label :volunteer_instructions
+  = f.text_area :volunteer_instructions, rows: 5
