@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   scope :future, -> { where("start_date >= ?", Time.zone.now.beginning_of_day).order(:start_date) }
 
   validates :title, length: { maximum: 60 }
-  validates_presence_of :description, :title, :address, :zipcode, :city, :state
+  validates_presence_of :description, :title, :address, :zipcode, :city, :state, :focus_id
   validate :validate_user_organization
   validates :number_of_volunteers_needed, numericality: { only_integer: true, greater_than: 0 }
   serialize :recurring_rules, IceCube::Schedule

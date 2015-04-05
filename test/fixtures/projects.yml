@@ -10,3 +10,4 @@ widows:
   start_time: <%= Time.now + 1.day %>
   end_time: <%= Time.now + 1.day + 1.hour %> 
   user_id: 1
+  focus_id: 1
