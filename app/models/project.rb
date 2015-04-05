@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
   validates :title, length: { maximum: 60 }
   validates_presence_of :description, :title, :address, :zipcode, :city, :state
   validate :validate_user_organization
-  validates :number_of_volunteers_needed, numericality: { only_integer: true, allow_nil: true }
+  validates :number_of_volunteers_needed, numericality: { only_integer: true, greater_than: 0 }
   serialize :recurring_rules, IceCube::Schedule
   has_many :signups
 

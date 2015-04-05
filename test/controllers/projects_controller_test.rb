@@ -2,7 +2,7 @@ class ProjectsControllerTest < ActionController::TestCase
   test "should create project" do
     session[:user_id] = users(:cbc).id
     assert_difference('Project.count') do
-      post :create, project: { :title => "Help widows in need", :description => "Come on out to Fenton and help widows in need. Pizza will be provided", :month => "01", :day => "01", :year => "2020", :address => "814 Northoak Drive", :city => "Nashville", :state => "TN", :zipcode => "37211" }
+      post :create, project: { :title => "Help widows in need", :description => "Come on out to Fenton and help widows in need. Pizza will be provided", :month => "01", :day => "01", :year => "2020", :address => "814 Northoak Drive", :city => "Nashville", :state => "TN", :zipcode => "37211", :number_of_volunteers_needed => "1" }
     end
     assert_redirected_to "/projects/#{Project.last.id}"
   end

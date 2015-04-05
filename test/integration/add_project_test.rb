@@ -27,6 +27,7 @@ class AddProjectTest < ActionDispatch::IntegrationTest
     fill_in('City', :with => 'Nashville')
     select('Tennessee', :from => 'project_state')
     fill_in('Zipcode', :with => '37211')
+    fill_in('Number of volunteers needed', :with => '1')
 
     assert_difference 'Project.count', 1 do
       click_button('Create Project')
