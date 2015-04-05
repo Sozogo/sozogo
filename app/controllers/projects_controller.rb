@@ -31,6 +31,7 @@ class ProjectsController < ApplicationController
 
   def update
     if current_user.id == @project.user.id
+      @project.save_start_date(params)
       if @project.update(project_params)
         flash[:notice] = "You successfully updated your project!"
       else
@@ -38,6 +39,12 @@ class ProjectsController < ApplicationController
       end
     end
     redirect_to @project
+  end
+
+  def destroy
+    project = Project.find(params[:id])
+    project.destroy
+    redirect_to users_projects_url(current_user)
   end
 
   def create

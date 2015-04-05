@@ -5,6 +5,7 @@
     - else
       = render 'signup', :project => @project
 - elsif logged_in? && ( current_user.id == @project.user.id )
-  #ation-form
+  #action-form
     = link_to "Edit", edit_project_path(@project), class: "button upper-right"
+    = link_to "Delete", { action: :destroy, id: @project.id }, class: "button upper-right", method: :delete, data: { confirm: "Are you sure you want to delete #{@project.title}?" }
     
