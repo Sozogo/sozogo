@@ -27,7 +27,9 @@ class Project < ActiveRecord::Base
   end
 
   def save_start_date(params)
-    self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
+    if params["project"]["year"] && params["project"]["month"] && params["project"]["day"]
+      self.start_date = DateTime.civil(params["project"]["year"].to_i, params["project"]["month"].to_i, params["project"]["day"].to_i)
+    end
   end
 
   def save_schedule(rule_hash)
