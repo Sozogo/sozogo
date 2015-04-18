@@ -1,4 +1,7 @@
 .project-detail
+  = link_to projects_path, class: "button" do
+    %i.fa.fa-arrow-left
+    Projects
   %h1.project-title= @project.title
   = render "project_actions"
   .project-organization

@@ -32,8 +32,17 @@ section.form {
 .clear { clear: both; }
 
 .button {
-  @include button;
+  @extend %button;
+  @include appearance(none);
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
   color: white;
+  &:hover {
+    color: white;
+  }
+
 }
 
 .link-no-style {
