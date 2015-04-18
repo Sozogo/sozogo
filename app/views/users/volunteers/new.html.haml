@@ -45,5 +45,7 @@
       = f.password_field :password, placeholder: "Password"
     .password-confirmation
       = f.password_field :password_confirmation, placeholder: "Password confirmation"
+  .hidden
+    = f.hidden_field :project, value: params[:project]
   .signup.clear
     = f.submit user_signup_message, :id => "new-user-submit", :class => "clear"

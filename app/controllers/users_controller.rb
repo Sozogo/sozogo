@@ -21,8 +21,14 @@ class UsersController < ApplicationController
       if @user
         flash[:notice] = "Welcome to SozoGo!"
         session[:user_id] = @user.id
+
+        if params[:volunteer][:project] && !params[:volunteer][:project].blank?
+          flash[:notice] = "Now that you have an account you can sign up for projects! If you would like to attend this event, simply click 'Sign me up!'"
+          redirect_to project_url(params[:volunteer][:project])
+        else
+          redirect_to "/"
+        end
       end
-        redirect_to "/"
     else
       flash[:alert] = "There was a problem creating your account. Please try again."
       @type = params[:type]
