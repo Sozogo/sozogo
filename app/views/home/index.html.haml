@@ -1,12 +1,16 @@
-%section.hero{:style => "background-image: url(#{image_path "building_home_sm.jpg"})"}
+%section.hero.clear{:style => "background-image: url(#{image_path "building_home_sm.jpg"})"}
   .hero-inner
     %a.hero-logo{:href => ""}
     .hero-copy
-      %h1 We are SozoGo
-      %p SozoGo is a website seeking to unite the Church in love and action by giving you the opportunity to volunteer and make a difference.
-    - unless @user
+      %h1 Go make a difference.<br />Volunteer today.
+      .search-container
+        = form_tag(projects_path, :method => "get", id: "zipcode-search") do
+          = text_field_tag :zipcode, params[:zipcode], placeholder: "Enter zipcode"
+          = submit_tag "Find opportunities", :name => nil
+      %p.clear SozoGo is a website seeking to unite the Church in love and action by giving you the opportunity to volunteer and make a difference. 
+    -#- unless @user
       = button_to 'Sign Up', {:controller => "home", :action => "signup"}, :method => :get
-%section.grid-items
+%section.grid-items.clear
   %a.grid-item{:href => "#{about_path}"}
     = image_tag("eye_lg.png")
     %h1 About
