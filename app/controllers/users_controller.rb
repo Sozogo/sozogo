@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         flash[:notice] = "Welcome to SozoGo!"
         session[:user_id] = @user.id
 
-        if params[:volunteer][:project] && !params[:volunteer][:project].blank?
+        if volunteer? && params[:volunteer][:project] && !params[:volunteer][:project].blank?
           flash[:notice] = "Now that you have an account you can sign up for projects! If you would like to attend this event, simply click 'Sign me up!'"
           redirect_to project_url(params[:volunteer][:project])
         else
