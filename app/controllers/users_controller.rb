@@ -47,10 +47,10 @@ class UsersController < ApplicationController
   end
 
   def volunteer?
-    params["type"] == "Volunteer"
+    params[:type] == "Volunteer"
   end
 
   def organization?
-    params["type"] == "Organization"
+    params[:type] == "Organization"
   end
 end
