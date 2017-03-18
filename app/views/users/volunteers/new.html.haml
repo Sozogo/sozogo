@@ -38,8 +38,8 @@
     .month.inline= f.select(:birth_month, months_array)
     .day.inline= f.select(:birth_day, days_array )
     .year.inline= f.select(:birth_year, previous_hundred_years)
-  .denomination
-    = f.text_field :denomination, placeholder: "What is your denomination?"
+  .phone
+    = f.text_field :phone_number, placeholder: "What is your phone number?"
   .row
     .password
       = f.password_field :password, placeholder: "Password"
