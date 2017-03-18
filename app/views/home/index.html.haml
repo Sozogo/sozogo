@@ -2,7 +2,7 @@
   .hero-inner
     %a.hero-logo{:href => ""}
     .hero-copy
-      %h1 Go make a difference.<br />Volunteer today.
+      %h1 Go make a difference.<br />Volunteer today!
       .search-container
         = form_tag(projects_path, :method => "get", id: "zipcode-search") do
           = text_field_tag :zipcode, params[:zipcode], placeholder: "Enter zipcode"
@@ -21,7 +21,7 @@
   - else
     %a.grid-item{:href => "#{projects_path}"}
       = image_tag("heart_lg.png")
-      %h1 Discover Opportunities
+      %h1 Find Projects
   %a.grid-item{:href => "#{donate_path}"}
     = image_tag("banknote_lg.png")
     %h1 Donate
@@ -30,6 +30,6 @@
     %h1 How does SozoGo work?
     %p It's simple! Create a profile, find a project that needs your help, volunteer, change the world.
     %h1 Who can volunteer?
-    %p There are opportunities for everyone, young and old. All you have to do is fill out a volunteer form and we do the heavy lifting. We will match you with possible opportunities that fit your skills and interests. As a bonus, you can receive rewards and coupons for becoming part of our team of volunteers. Will you join us in our efforts to better our world through partnership with your unique abilities and sign up today?
+    %p There are opportunities for everyone, young and old. All you have to do is fill out a volunteer form, find possible opportunities that fit your skills and interests, and sign up! Will you join us in our efforts to better our world through partnership with your unique abilities and sign up today?
     %h1 Need Volunteers?
-    %p When we allow ourselves to work side by side with others who harbor different skills, we become more powerful than we could ever be alone. Together, we can be the essential components that form a brighter and better future. Sign your Church or Christian entity up to reap the benefits of effective workers who can help bring your biggest ideas to reality. 
+    %p When we allow ourselves to work side by side with others who harbor different skills, we become more powerful than we could ever be alone. Together, we can be the essential components that form a brighter and better future. Sign your Church or Christian entity up to reap the benefits of effective workers who can help bring your biggest ideas to reality.
