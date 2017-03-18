@@ -6,7 +6,7 @@
         %th Name
         %th Email
         %th Occupation
-        %th Denomination
+        %th Phone
         %th Age
         %th T shirt size
     %tbody
@@ -15,6 +15,6 @@
           %td= signup.user.full_name
           %td= signup.user.email
           %td= signup.user.profession.name if signup.user.profession
-          %td= signup.user.denomination
+          %td= signup.user.phone_number
           %td= signup.user.age if signup.user.birthday
           %td= signup.user.shirt_size
