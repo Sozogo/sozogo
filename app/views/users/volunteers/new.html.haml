@@ -28,7 +28,7 @@
     = collection_select(:volunteer, :focus_ids, Focus.all, :id, :name, {}, { :multiple => true })
 
   .shirt-size
-    = f.text_field :shirt_size, placeholder: "What is your t-shirt size?"
+    = f.text_field :shirt_size, placeholder: "List any children serving with you. Adults please create individual account."
 
   .professions.clear
     = f.label "What is your profession?"
