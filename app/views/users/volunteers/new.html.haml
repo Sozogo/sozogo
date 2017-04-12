@@ -1,5 +1,5 @@
 %h1 Volunteer Sign Up
-%h2 Quickly create an account in less than 60 seconds to sign up for projects
+%h2 Create an account in less than 60 seconds to be able to sign up
 = form_for @user, :url => { :action => :create, :type => @type } do |f|
   - if @user.errors.any?
     .error-explanation
