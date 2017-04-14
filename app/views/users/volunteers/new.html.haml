@@ -32,7 +32,7 @@
     = f.text_field :shirt_size, placeholder: "List any children serving with you. Adults please create new account."
 
   .professions.clear
-    = f.label "What is your profession?"
+    = f.label "What is your profession? *optional"
     = collection_select(:volunteer, :profession_id, Profession.all, :id, :name, {})
   .birthday
     = f.label "When is your birthday?"
