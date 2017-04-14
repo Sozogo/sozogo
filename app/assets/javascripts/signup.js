@@ -11,10 +11,10 @@ signup.organizationTypeHandler = function() {
 
 signup.selectHandler = function() {
   $("#volunteer_language_ids").select2({
-    placeholder: "What languages do you speak?"
+    placeholder: "What languages do you speak? *optional"
   });
   $("#volunteer_focus_ids").select2({
-    placeholder: "What are your interests?"
+    placeholder: "What are your interests? *optional"
   });
   $("#organization_focus_ids").select2({
     placeholder: "What are your common events?"
